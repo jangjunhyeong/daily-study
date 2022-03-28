@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BLUEBOTTLE</title>
+</head>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	#root{
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		/* 무심코 align-items를 주었지만,
+		#root과 컨텐츠를 담는 .con의 높이가 같기 때문에 굳이 줄 필요는 없었다. */
+	}
+	.con{
+		width: 25vw;
+		height: 100vh;
+		background-color: lightgray;
+		/* iphone 13 pro max와 비슷한 크기의 대지를 만들었다. 가로폭이 많이 얇다.*/
+	}
+	.con>header{
+		width: inherit;
+		/* 부모와 같은 너비의 값을 할당시켰다. */
+		height: 10vh;
+		/* 대략적인 높이를 잡아주었다. */
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+	.con>header>:nth-child(1){
+		width: 2vw;
+		height: 2vw;
+		/* 정사각형을 만들기 위해서는 width값과 height값을 동일한 값을 주어야 하는데,
+		각각의 너비, 높이 viewport 값을 주게되면 정사각형이 나오지 않으므로
+		너비와 높이 모두 vw로 통일하였다. */
+		background-color:gray;
+		border-radius: 0.5vw;
+	}
+	.con>header>:nth-child(2){
+		font-size: 1rem;
+		/* rem은 폰트의 단위이다. */
+		font-weight: 900;
+	}
+	.con>header>:nth-child(3){
+		width: 2vw;
+		height: 2vw;
+		border-radius: 0.5vw;
+		background-color:gray;
+	}
+	/* 1번과3번이 같기에 속성 복사 */
+	main{
+		width: 20vw;
+		position:relative;
+		left: 5vw;
+	}
+		/* display: flex; */
+		/* 여긴 어차피 flex-direction이 세로에 block으로 되도 상관없는데 flex를 줄 필요가 있을까? */		
+	main>div:nth-child(1){
+		width: 6vw;
+		height: 7vh;
+		background-color: gray;
+		border-radius: 0.5vw;
+	}
+	main>div:nth-child(2){
+		font-size: 1.2rem;
+		font-weight: 700;
+		margin-top: 2vh;
+	}
+	main>div:nth-child(3){
+		font-size:0.8rem;
+		margin-top: 0.1vh;
+	}
+	/* 카드 div과 text 사이 그리고 text끼리의 사이간격을 잘 조절하여
+	위계를 나타내야겠다. */
+	section {
+		width: 25vw;
+		display:flex;
+		justify-content: center;
+		margin-top: 5vh;
+	}
+	section>div:nth-child(1){
+		width: 20vw;
+		height: 20vh;
+		background-color: gray;
+		border-radius: 1vw;
+	}
+	.text{
+		display: flex;
+		justify-content: center;
+		margin-top: 1vh;
+	}
+	.text>div{
+		display: flex;
+	}
+	.text>div:nth-child(1)>div:nth-child(1){
+		margin-left: 1vw;
+		margin-right: 1vw;
+		font-size: 0.7rem;
+		margin-top: 0.5vh;
+		/* 한글 text와 숫자(금액)text의 크기가 달라
+		행의 정렬이 맞지 않아 해당 div에 margin top을 조금넣었다. */
+	}
+	.text>div:nth-child(1)>div:nth-child(2){
+		margin-left: 1vw;
+		margin-right: 1vw;
+	font-size: 1rem;
+	font-weight: 700;
+	}
+	footer{
+		display: flex;
+		margin-top: 5vh;
+		justify-content: center;
+		width: 20vw;
+	}
+</style>
+<body>
+	<div id="root">
+		<div class="con">
+			<!-- 상단 menu bar를 header로 지칭했다. -->
+			<header>
+				<div></div>
+				<div>BLUEBOTTLE</div>
+				<div></div>
+			</header>
+			<!-- 평소에 div:nth-child()를 굉장히 많이 쓰기 때문에 markup 하다보면 몇 번째인지 세고있는
+			나를 발견하게 되는데... 다양한 시맨틱태그를 사용하면 조금이라도 쉽게 찾을 수 있다. -->
+			<main>
+				<div></div>
+				<div>내 카드</div>
+				<div>블루보틀 카드를 이용해보세요.</div>
+			</main>
+			<section>
+				<!-- 카드부분 -->
+				<div></div>
+			</section>
+				<!-- Text -->
+			<div class="text">
+				<div>
+					<div>블루보틀 카드</div>
+					<div>52,500원</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<!-- 학원에서는 live가 edge로 켜져서 alt+a4로 껐는데
+집에서는 크롬으로 열려서 alt+a4 하다가 크롬 다 꺼버려서
+figma까지 꺼진다. 다시 킨 것만 30번은 된다. 아무튼
+ctrl+w 로 끄는 연습-->

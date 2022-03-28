@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	body{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.root{
+		width: 50vw;
+		height: 100vh;
+		background-color: rgb(83, 83, 83);
+		display: flex;
+		flex-direction: column;
+		/* justify-content: center; */
+		align-items: center;
+	}
+		/* flex-direction을 column으로 주어서
+		justify-content는 세로축 중심 정렬
+		align-items는 가로축 중심 정렬로 이해하였다. */
+main>h1{
+	color: white;
+	text-align: center;
+	margin-top: 10vh;
+	font-size: 2rem;
+}
+main>div:nth-child(2){
+	margin-top: 10vh;
+	display: flex;
+	justify-content: center;
+}
+main>div:nth-child(2)>div{
+	background-color: lightgray;
+	width: 3vw;
+	height: 3vw;
+	border-radius: 3vw;
+	margin: 1vw;
+}
+main>div:nth-child(2)>div:nth-child(1){
+	position:relative;
+	top:20vh;
+	left:10vw;
+}
+main>div:nth-child(2)>div:nth-child(2){
+	position:relative;
+	top:10vh;
+}
+main>div:nth-child(2)>div:nth-child(3){
+	position:relative;
+}
+main>div:nth-child(2)>div:nth-child(4){
+	position:relative;
+
+}
+main>div:nth-child(2)>div:nth-child(5){
+	position:relative;
+	top:10vh;
+
+}
+main>div:nth-child(2)>div:nth-child(6){
+	position:relative;
+	top:20vh;
+	right: 10vw;
+}
+/* position:relative 를 주고 1,6번째 2,5번째, 3,4 번째 원을 묶어서 이동하여 해결하였다. */
+/* 현재 위치를 기준으로 position값을 주는 방법은 없을까? */
+
+.root>div:nth-child(2){
+margin-top: 10vh;
+width: 10vw;
+height: 3vh;
+background-color: lightgray;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 1.5rem;
+border-radius: 1vw;
+position: absolute;
+margin-top: 37vh;
+}
+/* text-align을 center 주는 것 보다
+div안에 p tag를 넣어서 display:flex, justify-content:center, align-items-center 주는 게
+일단 보기 좋긴하다. 정렬도 잘 호환이 되는 편이고. */
+
+/* 의문점
+width와 height를 모두 100 viewpoint로 준다면
+position을 absolute가 아닌 fixed로 줘도 상관없지 않을까?
+-> 유지보수를 위해서는 처음부터 fixed 주기는 좀 애매한듯 하다. */
+.text{
+	color:white;
+	text-align: center;
+	margin-top: 20vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.text>p:nth-child(1){
+	font-size: 1.5rem;
+}
+.text>p:nth-child(2){
+	font-size: 1rem;
+	margin-top: 10vh;
+}
+.text>div:nth-child(3){
+	width: 10vw;
+	height: 5vh;
+	background-color: lightgray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5vw;
+	margin-top: 10vh;
+	font-size: 2rem;
+	font-weight: 700;
+}
+.text>div:nth-child(3)>div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+</style>
+<body>
+	<div class="root">
+		<main>
+			<h1>MY RECIPE</h1>
+			<!-- 원 6개 -->
+			<div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<!-- 원 6개 벌집모양으로 layout 배치해야하는데 어떻게 할지 감도 안온다.
+			6개를 3div으로 나눠서 하는 방법 밖에는 떠오르지가 않음.
+			<어쨌든 해결하긴 했다.>
+			또는 일일이 원의 위치를 position으로 조정하는 방법
+			1줄에 2개의 div(원모양) 씩 가져가야 하는 구조이다. -->
+			<!--Test -->
+		</main>
+		<!-- 취항 분석중 division이 justify-content가 적용이 잘 안된다.
+			flex-direction을 2방향으로 주다보니 코드가 꼬여버려서 아예 div을 나누었다. -->
+			<!-- 일단 내가 생각한 해결 방한은 원 2개씩 div을 나눈 뒤에
+			position값으로 사이 간격을 주는 방식
+		마지막으로 취향 분석중 p tag를 position:absolute로 위치를 조정한다. -->
+			<div>
+				<p>취향 분석중... </p>
+			</div>
+			<!-- 취향 분석 중 tag는 position:absolute로 위치를 조정할 예정이다.-->
+		<div class="text">
+			<p>당신의 취향을 저격할 음식!<br>추천해 드릴게요!</p>
+			<p>맞춤 추천에서 나만의 요리를 찾아보세요</p>
+			<div>
+				<div>
+					<p>시작하기</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

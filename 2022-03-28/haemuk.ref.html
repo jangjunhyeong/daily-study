@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+</head>
+<style>
+
+*{
+	padding: 0;
+	margin: 0;
+}
+#root {
+	width: 100vw;
+	height: 100vh;
+	background-color: white;
+	display: flex;
+	flex-direction: column ;
+	font-family: 'Nanum Gothic', sans-serif;
+	background-color: gray;
+}
+/* 상단 메뉴 */
+.header{
+	width: inherit;
+	height: 15vh;
+	background-color: rgb(46, 46, 46);
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.header>div{
+	margin-top: 1vw;
+}
+.header>div:nth-child(1){
+	width: 5vw;
+	height: 5vw;
+	background-color: white;
+	border-radius: 1vw;
+}
+.header>div:nth-child(2){
+	width: 50vw;
+	height: 6vw;
+	background-color:lightgray;
+	border-radius: 10vw;
+	display: flex;
+	align-items: center;
+}
+.header>div:nth-child(2)>div{
+	font-size: 2rem;
+	color: white;
+	font-weight: 500;
+	font-family: 'Nanum Gothic', sans-serif;
+	position: relative;
+	left: 35vw;
+}
+.header>div:nth-child(3){
+	width: 5vw;
+	height: 5vw;
+	background-color: white;
+	border-radius: 1vw;
+}
+.header>div:nth-child(4){
+	width: 5vw;
+	height: 5vw;
+	background-color: white;
+	border-radius: 1vw;
+	margin-left: 2vw;
+}
+/* 메인 */
+.main{
+	width: inherit;
+	height: 65vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color:rgb(46, 46, 46);
+}
+.main>div{
+	color: white;
+	margin-top: 1vh;
+}
+.main>div:nth-child(1){
+	font-size:2rem;
+}
+.main>div:nth-child(2){
+	font-size:1rem;
+}
+.main>div:nth-child(3){
+	overflow: hidden;
+	display: flex;
+}
+.main>div:nth-child(3)>div{
+	width: 25vw;
+	height: 25vw;
+	background-color: white;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	border-radius: 2vw;
+}
+.footer{
+	display: flex;
+	justify-content: center;
+	height: 35vh;
+	background-color: rgb(46, 46, 46);
+}
+.footer>div{
+	margin-top: 5vw;
+	width: 30vw;
+	font-size: 2vw;
+	height: 5vh;
+	border: 1px solid white;
+	border-radius: 1vw;
+	color: white;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+</style>
+<body>
+	<div id="root">
+		<div class="header">
+			<div></div>
+			<div>
+				<div>오늘 뭐 먹지?</div>
+			</div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="main">
+			<div>#오늘의 추천메뉴</div>
+			<div>오늘 뭐 먹을지 고민하지 마세요.</div>
+			<div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<div class="footer">
+			<div>
+				<div>추천요리 더 알아보기</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

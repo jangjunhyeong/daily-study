@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	body{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.root{
+		/* 일단은 live stream 상에서 모바일 처럼 보이기 하기 위해서
+		width값을 35vw로 설정하였다. */
+		width: 35vw;
+		height: 100vh;
+		background-color: lightgray;
+		display: flex;
+		flex-direction: column;
+		/* justify-content: center; */
+		/* flex-direction을 column으로 하면 justify-content가 세로방향으로 전환되는 효과가 있다. */
+		/* align-items: center; */
+		font-family: 'Nanum Gothic', sans-serif;
+	}
+	.root>div:nth-child(1){
+		width: inherit;
+		height: 10vh;
+		display: flex;
+		align-items: center;
+	}
+	.root>div:nth-child(1)>div{
+		width: 1vw;
+		height: 1vw;
+		background-color: rgb(46,46,46);
+		margin-left: 1vw;
+		border-radius: 0.1vw;
+	}
+	.root>div:nth-child(2){
+		width: inherit;
+		height: 20vh;
+		background-color: rgb(46,46,46);
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.root>div:nth-child(2)>div:nth-child(2){
+		margin-top:5vh;
+		display: flex;
+		flex-direction: column;
+
+		text-align: left;
+	}
+	.root>div:nth-child(2)>div:nth-child(2)>div{
+		margin-top:1vh;
+	}
+.root>div:nth-child(2)>div:nth-child(1){
+	width: 4vw;
+	height: 4vw;
+	background-color: lightgray;
+	border-radius: 4vw;
+}
+.root>div:nth-child(2)>div:nth-child(2){
+	width: 8vw;
+	height: 8vw;
+	color:white;
+}
+.root>div:nth-child(2)>div:nth-child(2)>p:nth-child(1){
+	font-size: 1.5rem;
+	margin:0.1vw
+}
+	.root>div:nth-child(2)>div:nth-child(2)>p:nth-child(2){
+		font-size: 1rem;
+	}
+.root>div:nth-child(2)>div:nth-child(2)>div:nth-child(3){
+width: 5vw;
+height: 1vw;
+color: white;
+border: 1px solid white;
+border-radius: 0.5vw;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.root>div:nth-child(2)>div:nth-child(3){
+	width: 5vw;
+	height: 5vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color:lightgray;
+	color:white;
+	border-radius: 0.5vw;
+}
+</style>
+<body>
+	<div class="root">
+		<div>
+			<div></div>
+			<div></div> 
+			<div></div>
+			<div></div>
+		</div>
+		<div>
+			<div></div>
+			<div>
+				<p>김미식</p>
+				<p>팔로워 530 팔로잉36</p>
+				<div>
+					<p>나의 레시피</p>
+				</div>
+			</div>
+			<div>
+				<p>내정보 수정</p> 
+			</div>
+			<!-- 이후 아래부터는 text와 vh값만 다르기 때문에 마무리
+			다른 모양의 레이아웃도 연습해보기 -->
+		</div>
+	</div>
+</body>
+</html>

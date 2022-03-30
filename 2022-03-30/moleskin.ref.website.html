@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- 몰스킨 공식 온라인 스토어 클론 코딩
+	해당 웹사이트는 반응형 웹은 아니다.  -->
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		#root{
+			width: 100vw;
+			display:flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		header{
+			width: inherit;
+			height: 3vh;
+			background-color: black;
+			color: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 0.5rem;
+		}
+		menu{
+			width: inherit;
+			height: 11vh;
+			background-color: white;
+			border: 1px solid red;
+			/* 아직 익숙하지 않으니 border로 영역표시하기! */
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		menu>div>ul{
+			display: flex;
+			list-style: none;
+			align-items: center;
+			margin-top: 1vh;
+		}
+		menu>div>ul>li{
+			margin-right: 2vw;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		menu>div>ul>li>div{
+			width: 2vw;
+			height: 2vw;
+			background-color: gray;
+		}
+	menu>div:nth-child(2){
+		display: flex;
+		justify-content: space-between;
+	}
+	menu>div:nth-child(2)>ul{
+	margin-left: 5vw;
+	font-size: 1rem;
+	font-weight: 700;
+	}
+	menu>div:nth-child(2)>ul>div{
+		width: 30vw;
+		display: flex;
+		align-items: center;
+		background-color: skyblue;
+		justify-content: space-between;
+	}
+	menu>div:nth-child(2)>ul>div>div{
+	width: 1vw;
+	height: 1vw;
+	background-color: gray;
+	position: relative;
+	/* potion relative를 주니 현재 부모값에서 조금만 움직여줄 수 있구나! */
+	right: 1vw;
+	}
+main{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: inherit;
+	height: fit-content;
+}
+main>div:nth-child(1){
+	margin-top: 1vh;
+	width: 80vw;
+	height: 40vh;
+	background-color: gray;
+}
+main>div:nth-child(2){
+margin-top: 1vh;
+}
+main>div:nth-child(2)>p{
+font-size: 1.5rem;
+font-weight: 900;
+color: orangered;
+}
+main>div:nth-child(3){
+	display: flex;
+	justify-content: center;
+	width: 90vw;
+	height: max-content;
+}
+/* height를 max-content를 주니 편한 것 같다. */
+main>div:nth-child(3)>div{
+width: 45vw;
+height: 30vh;
+background-color: gray;
+margin-left:0.1vw;
+margin-right:0.1vw;
+/* 나의 mark-up 상태에서는 이미지가 없으니 임의로 좌우 margin을 주었다. */
+}
+/* 좌우 margin은 꼭 이렇게 줘야할까? */
+	</style>
+</head>
+<body>
+	<div id="root">
+		<header>
+			<p>-30,000원 이상 구매 시 무료배송!-</p>
+		</header>
+		<menu>
+			<div>
+				<ul>
+					<li style="font-size: 1.5rem; margin-left:5vw; margin-right: 5vw;">MOLESKINE</li>
+					<li style="font-size: 0.5rem;">aboutMOLESKINE</li>
+					<li style="font-size: 0.5rem;">myMOLESKINE</li>
+					<li style="font-size: 0.5rem;">PRODUCT GUIDE</li>
+					<li>HELP</li>
+					<!-- 아이콘이 들어가는 li 인데, 몰스킨 웹사이트에서 개발자도구 사용시에
+					icon 또한 하나의 div을 생성하여 flex-direction을 세로정렬 하였다.
+					작은 디테일 하나하나가 느껴졌다. -->
+					<li><div></div><p>LOGIN</p></li>
+					<li><div></div><p>JOIN</p></li>
+					<li><div></div><p>MYPAGE</p></li>
+					<li><div></div><p>CART</p></li>
+					<li><div></div><p>STORE</p></li>
+				</ul>
+			</div>
+			<div>
+				<ul>
+					<li>노트</li>
+					<li>다이어리</li>
+					<li>몰스킨 플러스</li>
+					<li>가방 & 액세서리</li>
+					<li>필기구</li>
+					<li style="color:red">SALE</li>
+					<div>
+						<p style="position:relative; left:2vw;">SEARCH</p>
+<!-- 간단하게 위치만 바꿔주고 싶어서 inline 방식으로 옮겨주었다. -->
+						<div></div>
+					</div>
+				</ul>
+			</div>
+		</menu>
+		<main>
+			<div></div>
+			<div>
+				<p>MOLESKINE 추천상품</p>
+			</div>
+			<div>
+				<div></div>
+				<div></div>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

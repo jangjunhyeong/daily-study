@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	#root{
+		width: 100vw;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	#root>header{
+		width: 100vw;
+		height: 5vh;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border: 1px solid red;
+	}
+	#root>header>div>ul:nth-child(1){
+		display: flex;
+		align-items: center;
+	}
+	#root>header>div>ul:nth-child(3){
+		display: flex;
+	}
+	#root>header>div:nth-child(1){
+		display: flex;
+		justify-content:center;
+	}
+	#root>header>div>ul{
+		list-style: none;
+	}
+	#root>header>div>ul>li{
+		margin-left: 1vw;
+		margin-right: 1vw;
+	}
+	#root>header>div:nth-child(2){
+		display: flex;
+		justify-content: center;
+	}
+	#root>header>div:nth-child(3){
+		display: flex;
+	}
+	#root>header>div:nth-child(3)>div{
+		width: 2vw;
+		height: 2vw;
+		border-radius: 0.5vw;
+		background-color: #ccc;
+		margin-left: 1vw;
+		margin-right: 1vw;
+	}
+	main{
+		width: 100vw;
+		height: 90vh;
+		background-color: lightgray;
+		border: 1px solid blue;
+		display: flex;
+		flex-direction: column;
+	}
+	main>div:nth-child(1){
+		width: inherit;
+		height: 30vh;
+		background-color: gray;
+		border: 1px solid green;
+		
+	}
+	main>div:nth-child(2){
+		width: inherit;
+		height: 30vh;
+		background-color: lightgray;
+		border: 1px solid green;
+	}
+	main>div:nth-child(3){
+		width: inherit;
+		height: 30vh;
+		background-color: gray;
+		border: 1px solid green;
+	}
+	.con-interview>div:nth-child(1){
+		display: flex;
+		justify-content: center;
+		height: 5vh;
+		align-items: center;
+	}
+	.con-interview>div:nth-child(2){
+		display: flex;
+		height: 25vh;
+		justify-content: center;
+		margin: 1vh;
+	}
+	.con-interview>div:nth-child(2)>div{
+		width: 15vw;
+		height: 20vh;
+	background-color: green;	
+	margin:1vw
+	}
+	.con-shop{
+		/* display: flex; */
+		justify-content: center;
+	}
+	.con-shop>div:nth-child(1){
+		display: flex;
+		justify-content: center;
+		height: 5vh;
+		align-items: center;
+	}
+	.con-shop>div:nth-child(2){
+		height: 25vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.con-shop>div:nth-child(2)>div{
+		width: 15vw;
+		height: 20vh;
+		background-color: blue;
+		margin: 1vw;
+	}
+	.b-cast>div:nth-child(1){
+		display: flex;
+		justify-content: center;
+		height: 5vh;
+		align-items: center;
+	}
+	.b-cast>div:nth-child(2){
+		width: inherit;
+		height: 25vw;
+	}
+	.b-cast>div:nth-child(2){
+		display: flex;
+	}
+	.b-cast>div:nth-child(2)>div:nth-child(1){
+		width: 20vw;
+		height: 20vh;
+		border: 1px solid black;
+		margin-right: 1vw;
+	}
+	.b-cast>div:nth-child(2){
+		display: flex;
+		justify-content: center;
+	}
+	.b-cast>div:nth-child(2)>div:nth-child(2)>div:nth-child(1)>p{
+	color: white;
+	font-weight: 900;
+	}
+
+	.b-cast>div:nth-child(2)>div:nth-child(2)>div:nth-child(2)>p{
+		color: white;
+		font-size: 0.5rem;
+		line-height: 3vh;
+	}
+</style>
+<body>
+	<div id="root">
+		<header>
+			<div>
+				<ul style="font-weight: 900;">
+					<li>ARCHIVE</li>
+					<li>STORY</li>
+					<li>SHOP</li>
+				</ul>
+			</div>
+			<div>
+				<p style="font-size: 2rem; font-weight: 900;">
+					B
+				</p>
+			</div>
+			<div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</header>
+		<main>
+			<div class="con-interview">
+				<div>
+				<p style="font-size: 1rem; font-weight: 900;">INTERVIEW</p>
+				<!-- 내부 스타일시트만 쓰다보니 코드가 너무~~~길어져서 간단한
+				p tag 스타일은 inline 방식으로 사용했다. -->
+				</div>
+				<div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+
+			<div class="con-shop">
+				<div>
+					<p style="font-size: 1rem; font-weight: 900;">SHOP</p>
+				</div>
+				<div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+			<div class="b-cast">
+				<div>
+					<p style="font-size: 1rem; font-weight: 900; color: white;">
+						B-CAST
+					</p>
+				</div>
+				<div>
+					<!-- 사진영역 -->
+					<div></div>
+					<div>
+						<!-- 글영역 -->
+						<div style="margin-bottom: 2vh;">
+							<p>EPISODE 113</p>
+							<p>B CAST<br>MEETS :<br>HAY</p>
+						</div>
+						<div>
+							<p style="border-bottom: 1px solid white;">IOS - ITUNES</p>
+							<p style="border-bottom: 1px solid white;">ANDROID - PODBBANG</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+</body>
+</html>
+<!-- 밑줄 tag는 border bottom 이다. -->

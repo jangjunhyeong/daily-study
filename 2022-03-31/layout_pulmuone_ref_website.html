@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>풀무원</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<!-- 스타일이 진짜 길어진다. 특히 display의 direction이 계속 바뀌고, 가상의 div을 또 넣어줘야 하다보니 또 코드가 꼬이는 현상이 너무 자주 일어나는데.
+div을 처음에 잘 잡았다고 생각해도 막상 코딩을 하면서 확인을 하면 너무 자주 꼬인다. -->
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		#root{
+			width: 100vw;
+			height: 200vh;
+			display: flex;
+			flex-direction: column;
+			font-family:'Noto Sans KR', sans-serif;
+		}
+		/* noto sans 폰트 가져오기 */
+		.ad{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: rgb(223, 223, 138);
+		}
+		.ad>div:nth-child(1){
+			width: 4vw;
+			height: 3vh;
+			background-color: rgba(255, 187, 0, 0.986);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 1vw;
+			color: white;
+		}
+		.ad>div:nth-child(2){
+			display: flex;
+			align-items: center;
+			width: 20vw;
+			height: 5vh;
+		}
+		.ad>div:nth-child(2)>p{
+		margin-left: 1vw;
+		margin-right: 1vw;
+		}
+		.ad>div:nth-child(3){
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			left: 30vw;
+			color: white;
+		}
+		/* div>ul>li 쓰면 편하게 li tag를 만들 수 있다. 오늘 실습예제와 비슷한 form의 풀무원 예제를 가져왔고, z-index와 position을 써서 겹쳐주었다. */
+		.user>div>ul{
+			width: inherit;
+			height: 3vh;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			list-style: none;
+		}
+		.user>div>ul>li{
+			margin-left: 1vw;
+			margin-right: 1vw;
+			color:gray;
+		}
+		.menu1{
+			width: inherit;
+			display: flex;
+			flex-direction: column;
+		}
+		.menu1>div{
+			display: flex;
+			flex-direction: row;
+			overflow: hidden;
+			align-items: center;
+		}
+		.menu1>div>div:nth-child(1){
+			background-color: rgb(120, 201, 0);
+			width: 120vw;
+			height: 8vh;
+			z-index: 2;
+			border-radius: 1vw;
+			position: relative;
+			right: 10vw;
+		}
+		.menu1>div>div:nth-child(1)>div{
+			height: 5vh;
+			display: flex;
+			color: white;
+			position: relative;
+			left: 30vw;
+			align-items: center;
+		}
+		.menu1>div>div:nth-child(2)>div:nth-child(1){
+			width:12vw;
+			height: 7vh;
+			background-color: brown;
+			color: white;
+			border-radius: 1vw;
+			z-index: 1;
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			align-items: center;
+			right: 12vw;
+			justify-content: center;
+			/* 이게 맞나 싶을 정도로 안이쁘다... 어쩔 수 없지. 사실은 6각형 모양으로 만든 뒤 z-index로 겹치는 것 같은데, 이건 다음에 해보자 */
+			/* 오늘 설명을 듣게 된 탭 메뉴이고, 크롬 창의 새창을 생각하면 된다. 풀무원은 크롬처럼 바뀌지는 않고 새롭게 로딩이 생긴다. */
+		}
+		.menu2{
+			width: 100vw;
+			height: 10vh;
+			background-color: rgb(120, 201, 0);
+			position: relative;
+			bottom: 1vh;
+			z-index: 3;
+		}
+		.menu2>ul{
+			display: flex;
+			color: white;
+			list-style: none;
+			font-size: 0.5rem;
+			align-items: center;
+			margin-top: 1vh;
+		}
+		/* font-size는 rem, em을 쓰는게 맞을까? */
+
+		.menu2>ul>li{
+			margin-left: 1vw;
+			margin-right: 1vw;
+		}
+		/* maring 좌우 이렇게 주는게 맞나..? 싶다 */
+		main{
+			width: 100vw;
+			height: 40vh;
+			background-color: rgb(120,201,0);
+			position: relative;
+			bottom: 1vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		main>div{
+		width: 90vw;
+		height: 40vh;
+		background-color: gray;
+		}
+	</style>
+</head>
+<body>
+	<div id="root">
+		<div class="ad">
+			<!-- ad>div(1) -->
+			<div>
+				<p>#삶의 힘</p>
+			</div>
+			<!-- ad>div(2) -->
+			<div>
+				<p>나의 가족을 위한 건강습관!</p>
+				<p style="color:orangered; position: relative; right: 1.5vw;">1일 1나또</p>
+			</div>
+			<!-- ad>div(3) -->
+			<div>
+				<div>X</div>
+				<p>오늘 그만보기</p>
+			</div>
+		</div>
+		<!-- ad끝 -->
+
+		<!--user menu 로그인, 회원가입, 고객기쁨센터, 배송안내 -->
+		<div class="user">
+		<div>
+			<ul>
+				<li>로그인</li>
+				<li>회원가입</li>
+				<li>고객기쁨센터</li>
+				<li>배송안내</li>
+			</ul>
+		</div>
+	</div>
+	<!-- user menu 끝 -->
+
+	<!-- main menu -->
+	<div class="menu1">
+		<!-- 초록부분 -->
+		<div>
+			<div>
+				<div>
+					<div style="position: relative; right: 10vw;"><p>#Pulmuone</p></div>
+					<div style="width: 20vw; height: 5vh; border-radius: 1vw; border: 1px solid white; display: flex; align-items: center; justify-content: space-between; font-size: 0.5rem;">
+						<p>신규회원 가입 시 인기상품 100원!</p>
+						<div style="width: 1vw; height: 1vw; background-color: white;"></div>
+					</div>
+					<div style="display: flex;">
+						<div style="width: 1vw; height: 1vw; background-color:white; margin:1vw;"></div> 
+						<div style="width: 1vw; height: 1vw; background-color:white;margin: 1vw;"></div> 
+						<div style="width: 1vw; height: 1vw; background-color:white; margin: 1vw;"></div> 
+						<!-- 코드가 자꾸 길어지니까 간단한 스타일 태그는 inline방식과 섞어서 쓰게 된다. 차라리 이럴꺼면 css로 외부스타일 시트 쓰는게 좋아보이긴 하는데..그래도 진짜 길겠지..? -->
+					</div>
+				</div>
+			</div>
+			<div>
+				<div>
+					<p style="font-size: 1rem;">ORGA</p>
+					<p style="font-size: 0.5rem;">WHOLE FOODS</p>
+				</div>
+			</div>
+		</div>
+		</div>
+		<!-- menu1 끝 -->
+		<div class="menu2">
+				<ul>
+					<li style="width: 1.5vw; height: 1.5vw; background-color: white; border-radius: 0.5vw;"></li>
+					<li>전체 카테고리</li>
+					<li>로하스관</li>
+					<li>베스트</li>
+					<li>일일배송</li>
+					<li>지금 세일</li>
+					<li>기획전/이벤트</li>
+					<li style="position: relative; left: 50vw;">녹즙, 내 맘대로 주문</li>
+					<div style="width: 1.5vw; height: 1.5vw; background-color: white; border-radius: 0.5vw;
+					position: relative; left: 50vw;"></div>
+				</ul>
+			</div>
+			<!-- menu2 끝 -->
+			<main>
+				<div></div>
+			</main>
+		</div>
+	</div>
+	<!-- #root 끝 -->
+</body>
+</html>

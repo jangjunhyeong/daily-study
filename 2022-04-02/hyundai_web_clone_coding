@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hyundai_card_clone_coding</title>
+	<link rel="stylesheet" href="/css/style.hyundaicard.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div id="root">
+		<header>
+			<div>
+			<!-- 로고 -->
+			<div>
+				<p>Hyundai Card</p>
+			</div>
+			<!-- 메뉴 -->
+			<div>
+				<ul>
+					<li>My Account</li>
+					<li>카드</li>
+					<li>혜택</li>
+					<li>금융</li>
+					<li>컬쳐</li>
+					<li>고객지원</li>
+				</ul>
+			</div>
+			<!-- 포털, 공시식, 검색 -->
+			<div>
+				<div><p>소비자보호 포털</p></div>
+				<div><p>상품공시실</p></div>
+				<div>
+					<div></div>
+					<p>카드, 메뉴, 혜택을 검색해 보세요</p>
+				</div>
+			</div>
+			</div>
+		</header>
+		<div class="ad">
+			<div>
+				<div>
+					<div>
+					<p>스타벅스 별 100개 적립받고 자동충전 5천원 할인 혜택까지!<p>
+					</div>
+					<div>
+						<div style="width: 1vw; height: 1vw; border: 2px solid white;
+						border-radius: 0.1vw;">
+						</div>
+						<p>오늘 하루 열지 않기</p>
+						<div>
+							<p style="font-size: 1rem;">X</p>
+						</div>
+					</div>
+				</div>
+		</div>
+		</div>
+		<!-- main display가 전부 column인줄 알았는데 아니였고, P태그 끼리는 column 이고
+		카드 이미지는 li로 flex-wrap 한듯 하다. 일단 해보고, 구역 나눠서 해보기 -->
+		<main>
+			<div>
+				<!-- ad main -->
+				<div style="background-color: gray;"></div>
+				<!-- ad scroll -->
+				<div>
+					<div style="font-size: xx-small;">● ● ● ● ● ●</div>
+				</div>
+				<!-- hyundai originals -->
+					<!-- 텍스트 부분 -->
+				<div>
+					<div id="card">
+						<div>
+							<p>Hyundai</p>
+							<p>Originals</p>
+							<p>현대카드의 오리지널리티를 담은</p>
+							<p>진정한 현대카드</p>
+							<p>전체보기</p>
+						</div>
+						<div>
+							<div>
+							<p>#프리미엄</p>
+							</div>
+							<div>
+							<p>#쓸 때마다 할인</p>
+							</div>
+							<div>
+							<p>#어디서나 포인트 적립</p>
+							</div>
+							<div>
+							<p>#3F 시스템 혜택</p>
+							</div>
+						</div>
+					</div>
+					<!-- 카드 부분 -->
+					<div id="cardimg">
+						<div>
+							<div>
+								<div></div>
+								<p>the Purple osee</p>
+							</div>
+							<div>
+								<div></div>
+								<p>the Red Editions5</p>
+							</div>
+							<div>
+								<div></div>
+								<p>the Green Edition2</p>
+							</div>
+							<div>
+								<div></div>
+								<p>the Pink</p>
+							</div>
+							<div>
+								<div></div>
+								<p>M BOOST</p>
+							</div>
+							<div>
+								<div></div>
+								<p>X BOOST</p>
+							</div>
+							<div>
+								<div></div>
+								<p>Z family</p>
+							</div>
+							<div> 
+								<div></div>
+								<p style="text-align: center;">ZERO Edition2 <br>(할인형)</p>
+							</div>
+						</div>
+				</div>
+			</div>
+			</div>
+			<div class="side">
+				<div class="login">
+					<div>
+						<div>
+							<p>로그인</p>
+							<p>다른 로그인 방법</p>
+						</div>
+						<!-- div(2) -->
+						<div style="background-color:blue;">
+							<div style="background-color: white; width: 50%;">
+							<p style="text-align: center;">간편번호</p>
+							</div>
+							<div style="background-color: lightgray; width: 50%;">
+							<p style="color:gray; text-align: center;">현대 카드 앱</p>
+							</div>
+						</div>
+						<!-- div(3) -->
+						<div>
+							<p>현대카드 홈페이지 간편번호</p>
+							<p>6자리를 설정해 주세요</p>
+						</div>
+						<div>● ● ● ● ● ●</div>
+						<div style="width:10vw; height:5vh; background-color:black;
+												border-radius: 2vw; display: flex; justify-content: center;
+												align-items: center;">
+							<p style="color:white">간편번호 등록</p></div>
+						<div style="position:relative; left:5vw;top:2vh"><p>회원가입</p></div>
+						</div>
+				</div>
+				<div class="counseling">
+					<div>
+						<div></div>
+						<p>고객지원</p>
+					</div>
+					<div>
+						<div></div>
+						<p>상담·문의</p>
+					</div>
+					<div>
+						<div></div>
+						<p>도난·분실</p>
+					</div>
+				</div>
+				<div class="fin">
+					<div><p style="font-size: larger; font-weight: 700;">금융</p></div>
+					<div>
+						<div>
+							<div>
+								<p>장기카드대출(카드론)</p>
+								<p>목돈이 필요할 때</p>
+							</div>
+							<div>
+								<p>신청</p>
+							</div>
+						</div>
+						<div>
+							<div>
+								<p>단기카드대출(현금서비스</p>
+								<p>일상에서 현금이 필요할 때</p>
+							</div>
+							<div>
+								<p>신청</p>
+							</div>
+						</div>
+						<div>
+							<div>
+								<p>일부결제금액이월약정(리볼빙)</p>
+								<p>카드대금이 부담될 때</p>
+							</div>
+							<div>
+								<p>신청</p>
+							</div>
+						</div>
+						<div>
+							<div>
+								<p>분할납부(할부전환)</p>
+								<p>일시불 결제 금액이 부담될 때</p>
+							</div>
+							<div>
+								<p>신청</p>
+							</div>
+						</div>
+					</div>
+		</main>
+
+</body>
+</html>

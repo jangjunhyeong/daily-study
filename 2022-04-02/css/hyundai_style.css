@@ -1,0 +1,316 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+#root{
+	width: 100vw;
+	height: 100vh;
+	/* background-color: gray; */
+	/* 구분을 위해 색 줬고, 끝났으니 색 뺀다. */
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Noto Sans KR', sans-serif;
+
+}
+#root>header{
+	width: 100vw;
+	display: flex;
+	justify-content:center;
+}
+#root>header>div{
+	width: 90vw;
+	height: 5vh;
+	min-height: 16px;
+	max-height: 100px;
+	display: flex;
+	justify-content:space-between;
+}
+/* 메뉴의 높이가 어느정도 되는지 가늠이 안될 때는 #root의 height 값을 fit-content로 준다. */
+/* min과 max height를 설정해두면 div의 높이의 최솟값과 최댓값을 넣어줄 수 있다. */
+#root>header>div>div:nth-child(1){
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#root>header>div>div:nth-child(2){
+	display: flex;
+	align-items: center;
+}
+
+#root>header>div>div:nth-child(2)>ul{
+	display:flex;
+	list-style: none;
+	align-items: center;
+}
+#root>header>div>div:nth-child(2)>ul>li{
+margin-right: 1vw;
+margin-left: 1vw;
+}
+#root>header>div>div:nth-child(3){
+	display: flex;
+	align-items: center;
+}
+#root>header>div>div:nth-child(3)>div{
+margin-left: 1vw;
+margin-right: 1vw;
+}
+#root>header>div>div:nth-child(3)>div:nth-child(3){
+	width: 17vw;
+	height: 3vh;
+	border: 1px solid black;
+	border-radius: 1vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#root>header>div>div:nth-child(3)>div:nth-child(3)>div:nth-child(1){
+	width: 1vw;
+	height: 1vw;
+	background-color: blue;
+	position: relative;
+	right: 2vw;
+}
+#root>header>div>div:nth-child(3){
+	color: gray;
+	font-size: smaller;
+}
+.ad{
+width:100vw;
+height:5vh;
+background-color: rgb(0, 37, 0);
+display: flex;
+justify-content: center;
+color: white;
+}
+.ad>div{
+	width: 90vw;
+	height: 5vh;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+}
+.ad>div>div{
+	width: inherit;
+	/* div안에 조금 width가 작은 div을 설정한 뒤 space-between으로 설정하는 방식
+	꼭!!!! 작은 div 또한 width 값을 설정해주어야 한다.!!!!!!! */
+	list-style: none;
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+}
+.ad>div>div>div:nth-child(2){
+	display: flex;
+	align-items: center;
+}
+.ad>div>div>div:nth-child(2)>div{
+	margin-left: 0.5vw;
+	margin-right: 0.5vw;
+}
+.ad>div>div>div:nth-child(2)>div:nth-child(3){
+	width: 1.5vw;
+	height: 1.5vw;
+	background-color: black;
+	border-radius: 2vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+main{
+	width:100vw;
+	height: fit-content;
+	/* background-color: blue; */
+	display: flex;
+}
+main>div:nth-child(1){
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 65vw;
+	height: fit-content;
+	/* background-color: blueviolet; */
+}
+main>div:nth-child(2){
+width: 25vw;
+height: fit-content;
+/* background-color: red; */
+}
+main>div>div:nth-child(1){
+	width: 40vw;
+	height: 30vh;
+	background-color: white;
+}
+main>div>div:nth-child(2){
+	width:50vw;
+	height: 3vh;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	margin-top: 2vh;
+}
+main>div>div:nth-child(3){
+	display: flex;
+}
+#card{
+	width:20vw;
+	height: 50vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	/* background-color: red; */
+}
+#card>div:nth-child(1){
+width: 10vw;
+position: relative;
+bottom: 4vh;
+}
+#card>div:nth-child(2){
+display: flex;
+flex-direction: column;
+/* justify-content: flex-start; */
+font-size: small;
+}
+#card>div:nth-child(2)>div{width:max-content; height: 2vh; border: 1px solid gray;
+border-radius: 10px; padding: 3px;
+position: relative;
+right: 1vw;
+color: gray;
+margin-top: 0.5vh;
+}
+
+/* nth-child(-n+2) 는 1번째~2번째 */
+#card>div>p:nth-child(-n+2){
+	font-size: 2rem;
+	font-weight: 900;
+}
+#card>div>p:nth-child(3){
+	font-size: small;
+}
+#card>div>p:nth-child(4){font-size: small;}
+#card>div>p:nth-child(5){font-size: small; color: rgb(0, 102, 255);}
+
+#cardimg{
+	width:30vw;
+	height: 50vh;
+	/* background-color: skyblue; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#cardimg>div{
+	width: 28vw;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+#cardimg>div>div{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 7vw;
+	font-size: smaller;
+}
+#cardimg>div>div>div{
+	width: 3vw;
+	height: 9vh;
+	background-color: gray;
+}
+.login{
+	display: flex;
+	background-color: white;
+	
+}
+.login>div{
+	position: relative;
+	left: 10vw;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	align-items: center;
+	justify-content: center;
+}
+.login>div:nth-child(1){
+	/* width: 30vw; */
+	display: flex;
+	/* justify-content:space-between; */
+}
+.login>div>div:nth-child(1)>p{
+margin-left: 1vw;
+margin-right: 1vw;
+}
+
+.login>div>div:nth-child(3){
+	margin-top: 3vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.login>div:nth-child(1)>div:nth-child(1){
+	display: flex;
+	justify-content:space-between;
+}
+.login>div:nth-child(1)>div:nth-child(2){
+	display: flex;
+	justify-content:space-between;
+	width: 10vw;
+	height: 3vh;
+	/* background-color: gray; */
+}
+
+
+.counseling{
+	display: flex;
+	justify-content: flex-start;
+	position: relative;
+	right: 10vw;
+	margin-top: 5vh;
+	/* border: 1px solid black; */
+	width: max-content;
+}
+.counseling>div{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: smaller;
+	margin-left: 1vw;
+	margin-right: 1vw;
+	align-items: center;
+	position: relative;
+	right: 1vw;
+}
+.counseling>div>div:nth-child(1){
+	background-color: gray;
+	width: 2vw;
+	height: 2vw;
+}
+.fin{
+	display: flex;
+	flex-direction: column;
+	margin-top: 3vh;
+}
+.fin>div:nth-child(2)>div{
+	display: flex;
+	margin-bottom: 2vh;
+	justify-content: space-between;
+}
+.fin>div:nth-child(2)>div>div:nth-child(2){
+	width: 4vw;
+	height: 4vh;
+	background-color: skyblue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius:0.5vw;
+}
+.fin>div:nth-child(2)>div>div>p:nth-child(1){
+	color: skyblue;
+}
+.fin>div:nth-child(2)>div>div>p:nth-child(2){
+	color: black;
+}
+.fin>div:nth-child(2)>div>div:nth-child(2)>p{
+	color:white;
+}

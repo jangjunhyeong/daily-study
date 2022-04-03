@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link rel="stylesheet" href="">
+	<style>
+		#root{
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			color:darkgray;
+
+		}
+		#root>div{
+			width: 50vw;
+			height: inherit;
+			background-color: black;
+		}
+		#root>div>div{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.fa-solid fa-angle-lef{
+			color: black;
+		}
+		@font-face {
+			font-family:impact;
+			src: url(https://www.dafontfree.io/impact-font/);
+		}
+
+		
+		#root>div>div>div:nth-child(1){
+			position: relative;
+			right: 8vw;
+			top:2vh;
+		}
+		#root>div>div>div:nth-child(2)>p{
+			font-family: impact;
+			font-size:4rem;
+			position: relative;
+			line-height: 9vh;
+			bottom: 5vh;
+		}
+		#root>div>div>div:nth-child(3){
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			bottom: 10vh;
+			width: 20vw;
+			padding: 2vh;
+			height: 2vh;
+			background-color:gray;
+			border-radius: 3vw;
+			text-align: center;
+			font-size: xx-small;
+		}
+
+	</style>
+	</head>
+<body>
+	<div id="root">
+		<div>
+			<div>
+				<div>
+					<i class="fa-solid fa-angle-left"></i>
+				</div>
+				<div>
+					<p>
+					this is<br>just<br>exam<br>but<br>make<br> my own
+					</p>
+				</div>
+				<div>
+				<p>view more</p>
+				</div>
+			</div>
+	</div>
+</body>
+</html>

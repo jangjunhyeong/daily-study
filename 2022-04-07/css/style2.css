@@ -1,0 +1,98 @@
+*{padding: 0; margin: 0;}
+:root{
+	--g:gray;
+	--dg:darkgray;
+	--lg:lightgray;
+	--b:rgb(0, 140, 255);
+}
+
+#root{
+	width: 100vw;
+	height: 100vh;
+	background-color:var(--lg);
+	display: flex;
+	justify-content: center;
+}
+.con{
+	width: 20vw;
+	height:100vh;
+	background-color:var(--b);
+	display: flex;
+	/* justify-content: center; */
+}
+.con>div{
+	width: 20vw;
+	height:100vh;
+	display: flex;
+	flex-direction:row;
+	position: relative;
+}
+.con>div>menu{
+	width: 12vw;
+	height: inherit;
+	background-color: aliceblue;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.con>div>menu>div{
+	width: 2vw;
+	height:3vh;
+	background-color:var(--b);
+	margin-bottom: 8vh;
+}
+.con>div>main{
+	display: flex;
+	justify-content: center;
+}
+.con>div>main>div{
+	width: 90%;
+	height: 30vh;
+	background-color: aliceblue;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* align-items: center; */
+
+}
+.con>div>main{
+	margin-top: 10vh;
+}
+.con>div>main>div{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.con>div>main>div>div:nth-child(1){
+	color: var(--b);
+	font-size: 2rem;
+	margin-bottom: 1vh;
+	position: relative;
+	right: 4vw;
+}
+.con>div>main>div>div:nth-child(2){
+	width: 90%;
+	height: 0.1vh;
+	background-color:var(--b);
+	margin-bottom: 5vh;
+}
+.con>div>main>div>div:nth-child(3){
+	width: 90%;
+	text-align: justify;
+}
+.con>div>div:nth-child(3){
+	width: 4vw;
+	height: 4vw;
+	border-radius: 4vw;
+	background-color: aliceblue;
+	position: absolute;
+	top: 50vh;
+	left: 9vw;
+}
+
+
+
+
+

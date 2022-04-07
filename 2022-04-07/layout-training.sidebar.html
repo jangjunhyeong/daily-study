@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/style2.css">
+</head>
+<body>
+	<!-- 외부 스타일시트를 하나로만 작성하다보니 레이아웃이 돌이킬 수 없도록 틀어져
+	작성해둔 스타일시트의 일부분만 가져와서 스타일링 작업을 했습니다.-->
+	<div id="root">
+		<div class="con">
+			<div>
+				<menu>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</menu>
+				<!-- Q1.menu라는 시멘틱태그를 이용해서 따로 스타일링을 적용했으나,
+						전에 작성해둔 외부스타일시트에서 con>div:nth-child(1)의 속성과 충돌해서
+						따로 position값을 넣어 '억지로' 레이아웃을 맞춰버리는 방식을 이용했습니다.
+						해당 방식의 position 사용도 지양하는 편이 좋을까요? 
+					
+					- 이후에 결국 style2.css라는 스타일시트를 하나 더 만들었습니다.-->
+					<main>
+						<div>
+							<div><p>Web unit</p></div>
+							<div></div>
+							<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, vero quas dolores veritatis dolor eum possimus aut quae? Voluptas ea, quam eaque harum praesentium autem accusantium vitae necessitatibus non minus, sit, cupiditate optio. Eos odio corporis illum dolorum quo neque!</div>
+						</div>
+					</main>
+					<div></div>
+				</div>
+		</div>
+	</div>
+</body>
+</html>

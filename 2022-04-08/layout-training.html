@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width= , initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{padding: 0; margin: 0;}
+		#root{
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			background-color: lightgray;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid black;
+		}
+		#root>div{
+			background-color: gray;
+			width: 40vw;
+			height: 80vh;
+			border: 1px solid black;
+
+		}
+		#root>div:nth-child(2){
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		#root>div:nth-child(2)>div{
+			width: 30vw;
+			height: 40vh;
+			background-color:darkgray;
+			border: 1px solid black;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		#root>div:nth-child(2)>div>div{
+			width: 14vw;
+			height: 30vh;
+			background-color: gray;
+			border: 1px solid black;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="root">
+		<div></div>
+		<div>
+			<div></div>
+			<div>
+				<div>
+					<div style="display:flex; justify-content: center; align-items: center;">
+						<div style="width:5vw; height:5vw; background-color:red;">
+						</div>
+					</div>
+					<div>
+					</div>
+				</div>
+				<div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

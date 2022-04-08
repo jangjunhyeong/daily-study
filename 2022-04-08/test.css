@@ -1,0 +1,14 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+
+#root div {
+  color: red;
+}
+
+#root>div>div>div>div>div>div{
+  color:blue;
+}
+/*# sourceMappingURL=test.css.map */

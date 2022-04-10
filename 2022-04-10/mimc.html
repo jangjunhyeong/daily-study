@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>명인명촌</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	#root{
+		width: 100vw;
+		height: 200vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: 'Noto Sans KR', sans-serif;
+	}
+	.con{
+		width: 90vw;
+		height: 200vh;
+	}
+	header{
+		width: 90vw;
+		height: 8vh;
+		display: flex;
+		align-items: center;
+		justify-content:space-between;
+		position: fixed;
+		top: 0;
+		background-color: white;
+		z-index:2;
+	}
+	/* header 메뉴는 position-fixed를 줘야 스크롤을 내렸을 때 상단에 위치하고,
+	배경색을 넣고 z-index을 값을 넣어줘야, 콘텐츠에 메뉴바가 가려지지 않는다. */
+	header>div>ul{
+		list-style: none;
+		display: flex;
+		background-color: white;
+
+	}
+	header>div:nth-child(1)>ul{
+		width: 30vw;
+		height: 8vh;
+		display: flex;
+		border: 1px solid black;
+		justify-content: space-around;
+		align-items: center;
+		margin-top: 1vh;
+		background-color: white;
+
+	}
+	header>div:nth-child(1)>ul>li{
+		width: 7.5vw;
+		border: 1px solid black;
+		height: 8vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: 100;
+		background-color: white;
+
+
+	}
+	header>div:nth-child(2){
+		width: 30vw;
+		height: 8vh;
+		display: flex;
+		border: 1px solid black;
+		justify-content: space-around;
+		align-items: center;
+		margin-top: 1vh;
+		background-color: white;
+
+	}
+	header>div:nth-child(3)>ul{
+		width: 30vw;
+		height: 8vh;
+		display: flex;
+		border: 1px solid black;
+		justify-content: space-around;
+		align-items: center;
+		margin-top: 1vh;
+		background-color: white;
+
+	}
+	header>div:nth-child(3)>ul>li{
+		width: 10vw;
+		border: 1px solid black;
+		height: 8vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: white;
+
+	}
+	header>div:nth-child(3)>ul{
+		width: 30vw;
+		height: 8vh;
+		display: flex;
+		border: 1px solid black;
+		justify-content: space-around;
+		align-items: center;
+		margin-top: 1vh;
+		background-color: white;
+
+	}
+	header>div:nth-child(3)>ul>li{
+		font-weight: 100;
+	}
+	main{
+		position: relative;
+		top: 10vh;
+	}
+	.con1>div{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.con1>div>div{
+		width: 30vw;
+		height: 40vh;
+		border: 1px solid black;
+	}
+	.con1>div:nth-child(1)>div:nth-child(1)>div:nth-child(1){
+		position: relative;
+		left: 0.5vw;
+	}
+	.con1>div:nth-child(1)>div:nth-child(1)>div:nth-child(2){
+		position: relative;
+		left: 0.5vw;
+	}
+	.con1>div>div:nth-child(2){
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.con1>div>div:nth-child(2)>div{
+		width: 29vw;
+		height: 38vh;
+		background-color: lightgray;
+	}
+	.nametag-full-3{
+		border-radius: 0;
+		width:max-content;
+		padding:3px;
+		background-color:white;
+		border: 1px solid black;
+	}
+	.con2{
+		margin-top: 1vh;
+	}
+	.b-img{
+		width: 50vw;
+		height: 50vh;
+		border: 1px solid black;
+	}
+	.con2>div>div:nth-child(2){
+		width: 50vw;
+		height: 50vh;
+		border: 1px solid black;
+	}
+	.flex-r{
+		justify-content:center;
+	}
+	.font-weight-100{
+		text-align: left;
+	}
+
+</style>
+<body>
+	<div id="root">
+		<div class="con">
+			<header>
+				<div>
+					<ul>
+						<li>Story</li>
+						<li>Product</li>
+						<li>Now</li>
+						<li>Contact</li>
+					</ul>
+				</div>
+				<div><h1 class="font-weight-100">명인명촌</h1></div>
+				<div>
+					<ul>
+						<li>Market</li>
+						<li>English</li>
+						<li>Search</li>
+					</ul>
+				</div>
+			</header>
+			<main>
+				<div class="con1">
+					<div>
+						<div>
+							<div class="j-s-a">
+							<p><h1 style="margin-bottom: 3vh; margin-top: 3vh; font-weight: 300;">이야기가 있는 숨겨진 보물,<br>명인명촌</h1><h5 class="font-weight-100" style="line-height: 3vh; width: 20vw;">'이야기가 있는 숨겨진 보물' 은 하늘의 때, 땅의 기운 그리고 사람의 마음을 살필 줄 압니다.
+							열매를 보면서 줄기와 뿌리와 흙을 살피고 봄부터 피어난 꽃을 생각하고 나비와 벌의 수고를 기억합니다. 더불어 삻아가는 생명체에 대한 
+							건강한 생태계를 중요하게 생각합니다. 그리고 생산자와 소비자의 건강한 삶의 가치를 추구합니다.
+						</h5>
+						</p>
+						</div>
+						<div class="nametag-full-3">
+							<p>브랜드 스토리 자세히 보기</p>
+						</div>
+					</div>
+						<!--img -->
+						<div>
+							<div class="space-around">
+								<p>맛을 빚는 사람들</p>
+								<p>1'00"</p>
+							</div>
+						</div>
+<!-- 여기까지 inline 방식 또는 내부스타일시트 방식으로 스타일링을 하다가 도저히
+효율..? 이 나지 않아서, 전에 쓰던 외부스타일시트를 가져오는 방식으로 스타일링을 했다. -->
+						<div class="flex-c-c">
+							<p><h3 class="font-weight-100">국령애 장인전</h3></p>
+							<p><h4 class="font-weight-100">다산 정약용의 비방을 토대로 만들어진 볶음 고추장을<br>맛보세요.
+								약초와 수제 고추장에 직접 손질한 재료가<br>어우러진 국령애 님의...
+							</h4>
+						</p>
+							<div class="nametag-full-3">
+								<p class="font-weight-100">자세히 보기</p>
+							</div>
+							<div class="p-t flex-r">
+								<div class="mini-bar m-l-r"></div>
+								<div class="mini-bar m-l-r b-g"></div>
+								<div class="mini-bar m-l-r b-g"></div>
+							</div>
+						</div>
+					</div>
+					<div></div>
+					<div></div>
+				</div>
+				<div class="con2">
+					<div class="flex-r">
+						<div class="b-img"></div>
+						<div>
+							<div class="p-l flex-c j-s-a" style="height: inherit;">
+							<p><h5 class="font-weight-100">해바랑 현미식초</h5></p>
+							<p><h3 class="font-weight-100">가장 큰 차이는 아무래도 주원료를<br>
+							직접 생산하는 데서 나오는 것이<br>
+						아닐까요. 여러 곳에서 장을<br>
+						만들지만 저희처럼 대단지로 콩과<br>
+						쌀을 직접 생산하는 곳은 드물<br>
+						것이라 생각합니다.</h3></p>
+						<div class="nametag-full-3">제품 자세히 보기</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+	</div>
+</body>
+</html>

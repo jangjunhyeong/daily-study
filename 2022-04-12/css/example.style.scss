@@ -1,0 +1,38 @@
+// 작동한다 = compile
+*{
+	margin: 0;
+	padding: 0;
+}
+@mixin flex-setting($c:center, $e:end){
+	justify-content:$c;
+	align-items:$e;
+}
+
+#root{
+	width: 100vw;
+	height: 100vh;
+	background-color: lightgray;
+	@include flex-setting(center);
+
+	&>div{
+		width: 50vw;
+		background-color: gray;
+		height: 50vh;
+		background-color: lightcoral;
+
+	@include flex-setting(flex-start);
+
+		&>section{
+			width: 100px;
+			height: 100px;
+			background-color: lightblue;
+			border: 1px solid black;
+
+		}
+		&>section:nth-child(2){
+			background-color: blue;
+			width: 200px;
+	// {} 브레이스 , & 앰퍼샌드
+		}
+	}
+}

@@ -1,0 +1,33 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+$c:center;
+$f-e:flex-end;
+// $name:value; 로 :root{} 느낌의 속성선언이 가능하다.
+@mixin flex-setting($j-c,$a-i:flex-end){
+	display:flex;
+	justify-content:$j-c;
+	align-items:$a-i;
+}
+
+
+#root{
+	width: 100vw;
+	height: 200vh;
+	background-color:white;
+	@include flex-setting($c,$f-e);
+
+	& > div:nth-child(1){ 
+		width:25vw;
+		height:45vh;
+		background-color:blue;
+	}
+	& > div:nth-child(2){
+		width:25vw;
+		height:45vh;
+		background-color:red;
+	}
+
+}

@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-color: lightgray;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+#root > div {
+  width: 50vw;
+  background-color: gray;
+  height: 50vh;
+  background-color: lightcoral;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+#root > div > section {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid black;
+}
+
+#root > div > section:nth-child(2) {
+  background-color: blue;
+  width: 200px;
+}
+/*# sourceMappingURL=example.style.css.map */

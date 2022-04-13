@@ -1,0 +1,159 @@
+*{margin: 0; padding: 0;}
+
+
+#root{
+	width: 99vw;
+	height: 200vh;
+	background-color:whitesmoke;
+}
+.con{
+	display: flex;
+	flex-direction: column;
+	width: 99vw;
+
+	&>div:nth-child(2){
+		width: 99vw;
+		height: 0.1vh;
+		background-color: black;
+		opacity: 0.2;
+	}
+
+	&>div:nth-child(1){
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content:center;
+	
+
+&>ul:nth-child(1){
+	width: 70vw;
+	height: 10vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	list-style: none;
+
+	&>li{
+		margin-right: 3vw;
+	} 
+	&>li:nth-child(1){
+		font-size: 1rem;
+		margin-right: 4vw;
+		font-family: 'Noto Serif KR', serif;
+	}
+}
+
+&>ul:nth-child(2){
+	width: 25vw;
+	height: 10vh;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	list-style: none;
+	justify-content: end;
+
+	&>li>div{
+		width: 1vw;
+		height: 1vw;
+		background-color:black;
+		border-radius: 20%;
+		margin-right: 2vw;
+	
+	}
+	&>li:nth-child(4){
+		margin-left: 5vw;
+	}
+}
+	}
+}
+.con-2{
+	display:flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 4vh;
+
+
+	&>main{
+		width:60vw;
+		height: 100vh;
+		border: 0.5px solid rgb(82, 82, 82);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		&>div:nth-child(3){
+			width: 50vw;
+			height: 50vh;
+			background-color: rgb(247, 239, 194);
+			margin-top: 3vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			&>h1{
+				font-family: 'Noto Serif KR', serif;
+			}
+			&>h1:nth-child(1){
+				margin-top: 3vh;
+			}
+			&>h1:nth-child(2){
+				color: rgb(163, 211, 124);
+				margin-top: 1vh;
+			}
+		}
+		&>div:nth-child(2){
+			width: 50vw;
+			height: 0.2vh;
+			background-color: rgb(82, 82, 82);
+		}
+		&>div:nth-child(1){
+			line-height: 5vh;
+			text-align: center;
+			margin-top: 5vh;
+			
+			&>h1{
+				font-family: 'Noto Serif KR', serif;
+				font-weight: 100
+
+			}
+			&>h5{
+				margin-top: 1vh;
+			}
+		}
+	}
+	&>section{
+		width: 15vw;
+		height: 70vh;
+		margin-left: 3vw;
+		&>div{
+			margin-bottom: 3vh;
+		}
+		&>div:nth-child(3){
+			margin-top: 2vh;
+			&>div{
+				margin-bottom: 5vh;
+			}
+			&>div>h4{
+				font-family:'Noto Serif KR', serif;
+				margin-top: 1vh;
+			}
+			&>div>div:nth-child(1){
+				width: 15vw;
+				height: 15vh;
+				background-color: rgb(252, 213, 213);
+			}
+		}
+		&>div:nth-child(1){
+			width: 15vw;
+			height: 0.2vh;
+			background: rgb(82, 82, 82);
+		}
+		&>div:nth-child(2){
+			
+			&>h4{
+				margin-top: 1vh;
+				margin-left: 0.5vw;
+			}
+		}
+	}
+
+}

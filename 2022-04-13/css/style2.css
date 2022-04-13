@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 99vw;
+  height: 200vh;
+  background-color: whitesmoke;
+}
+
+.con {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 99vw;
+}
+
+.con > div:nth-child(2) {
+  width: 99vw;
+  height: 0.1vh;
+  background-color: black;
+  opacity: 0.2;
+}
+
+.con > div:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.con > div:nth-child(1) > ul:nth-child(1) {
+  width: 70vw;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.con > div:nth-child(1) > ul:nth-child(1) > li {
+  margin-right: 3vw;
+}
+
+.con > div:nth-child(1) > ul:nth-child(1) > li:nth-child(1) {
+  font-size: 1rem;
+  margin-right: 4vw;
+  font-family: 'Noto Serif KR', serif;
+}
+
+.con > div:nth-child(1) > ul:nth-child(2) {
+  width: 25vw;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.con > div:nth-child(1) > ul:nth-child(2) > li > div {
+  width: 1vw;
+  height: 1vw;
+  background-color: black;
+  border-radius: 20%;
+  margin-right: 2vw;
+}
+
+.con > div:nth-child(1) > ul:nth-child(2) > li:nth-child(4) {
+  margin-left: 5vw;
+}
+
+.con-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 4vh;
+}
+
+.con-2 > main {
+  width: 60vw;
+  height: 100vh;
+  border: 0.5px solid #525252;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.con-2 > main > div:nth-child(3) {
+  width: 50vw;
+  height: 50vh;
+  background-color: #f7efc2;
+  margin-top: 3vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.con-2 > main > div:nth-child(3) > h1 {
+  font-family: 'Noto Serif KR', serif;
+}
+
+.con-2 > main > div:nth-child(3) > h1:nth-child(1) {
+  margin-top: 3vh;
+}
+
+.con-2 > main > div:nth-child(3) > h1:nth-child(2) {
+  color: #a3d37c;
+  margin-top: 1vh;
+}
+
+.con-2 > main > div:nth-child(2) {
+  width: 50vw;
+  height: 0.2vh;
+  background-color: #525252;
+}
+
+.con-2 > main > div:nth-child(1) {
+  line-height: 5vh;
+  text-align: center;
+  margin-top: 5vh;
+}
+
+.con-2 > main > div:nth-child(1) > h1 {
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 100;
+}
+
+.con-2 > main > div:nth-child(1) > h5 {
+  margin-top: 1vh;
+}
+
+.con-2 > section {
+  width: 15vw;
+  height: 70vh;
+  margin-left: 3vw;
+}
+
+.con-2 > section > div {
+  margin-bottom: 3vh;
+}
+
+.con-2 > section > div:nth-child(3) {
+  margin-top: 2vh;
+}
+
+.con-2 > section > div:nth-child(3) > div {
+  margin-bottom: 5vh;
+}
+
+.con-2 > section > div:nth-child(3) > div > h4 {
+  font-family: 'Noto Serif KR', serif;
+  margin-top: 1vh;
+}
+
+.con-2 > section > div:nth-child(3) > div > div:nth-child(1) {
+  width: 15vw;
+  height: 15vh;
+  background-color: #fcd5d5;
+}
+
+.con-2 > section > div:nth-child(1) {
+  width: 15vw;
+  height: 0.2vh;
+  background: #525252;
+}
+
+.con-2 > section > div:nth-child(2) > h4 {
+  margin-top: 1vh;
+  margin-left: 0.5vw;
+}
+/*# sourceMappingURL=style2.css.map */

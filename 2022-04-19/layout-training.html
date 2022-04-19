@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LAYOUT-TRAINING</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div id="root">
+		<div class="con">
+			<div class="circle">
+				<div></div>
+				<div></div>
+			</div>
+			<div class="dot">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div>
+			<div class="blur1">
+				<div>
+					<div>
+						<H1>DON'T</H1>
+						<H1>DWELL</H1>
+						<H1>ON</H1>
+						<H1>THE</H1>
+						<H1>PAST.</H1>
+					</div>
+				</div>
+			</div>
+			<div class="blur2">
+				<div>
+					<div>
+						<H1>SEIZE</H1>
+						<H1>THE</H1>
+						<H1>DAY.</H1>
+					</div>
+				</div>
+			</div>
+			</div>
+			</div>
+			</div>
+
+			<script>
+				// const blur1 = document.querySelector('.blur1');
+				// blur1.style.order = 1;
+				// const blur2 = document.querySelector('.blur2');
+				// blur2.style.order = 2;
+
+				// blur1.addEventListener('click', function() {
+				// 	console.dir(blur1);
+				// 	blur1.style.order = 2;
+				// 	blur2.style.order = 1;
+				// });
+				// 처음 작성한 코드
+			
+				const blur1 = document.querySelector('.blur1');
+				blur1.style.order = 1;
+				const blur2 = document.querySelector('.blur2');
+				blur2.style.order = 2;
+				blur1.addEventListener('click',function(){
+					console.dir(blur1);
+					blur1.style.order=2;
+					blur2.style.order=1;
+				});
+				// 두 번째로 다시 작성한 코드
+				// 또한 작동하지 않는다.
+				// 로그는 기록이 된다.
+			</script>
+			<!-- javascript 기능이 작동하지 않습니다. -->
+			<!-- 만약, 작동하는 class의 가동범위가 있다면 하나라도 변경이 -->
+			<!-- 되어야 할 텐데, 아무것도 변하지 않습니다. -->
+
+</body>
+</html>

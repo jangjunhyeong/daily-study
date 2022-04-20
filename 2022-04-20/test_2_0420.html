@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.title{
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div class="title">hello</div>
+
+	<script>
+		let a = document.getElementsByClassName('title');
+		// 자스야 왜 id로 하니까 잘 되다가 class로 하니까 안되니????
+		console.log(a);
+		console.dir(a);
+		console.log(a.style);
+		// style도 안먹고
+		let colorValue="red";
+		a[0].style.color=colorValue;
+
+		// class에서 배열이 0이라서 [0]을 입력해야 겨우 해결...
+		// 이게 뭘까..?
+		// 아무튼 log,dir 계속 확인해서 찾아보기.
+	</script>
+</body>
+</html>

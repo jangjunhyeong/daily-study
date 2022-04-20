@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1 id="title">hello</h1>
+
+
+	<script>
+		let a = document.getElementById('title');
+		// 자스야 문서에 내가 아이디 값을 하나 가져오고 싶어. 그 아이디 값 이름은 문자열 title 이야.
+		// 발견했으면 변수에 지정해줄게, 변수 이름은 a 야
+		console.log(a);
+		console.dir(a);
+		console.log(a.style);
+		//자스야 내가 구조를 좀 보니까 style 이라는 키 값이 보였어. 이게 뭐야?
+		let colorValue = "red";
+		// 변수 선언, 선언은 문자열 OOO야. (뭔진 모르겠는데, 아무튼 빨간색은 아님)
+		a.style.color = colorValue;
+		if(a.style.color ==="red") {
+			a.style.color = "rgba(157,124,111,0.3)"
+		}
+			</script>
+
+</body>
+</html>

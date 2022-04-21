@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		/* *{
+			margin: 0;
+			padding: 0;
+		}
+		#root{
+			width: 100vw;
+			height: 100vh;
+			background-color:blue;
+			opacity: 0.5;
+		} */
+	</style>
+</head>
+<body>
+	<div id="root"></div>
+
+	<script>
+		
+		const root = document.getElementById("root");
+		// geElementById() 함수는 인수(argument)로 문자열(string)로만 받는 규칙이 들어있다.
+		console.log(root);
+		
+		let baek =100;
+
+
+		root.style.width = baek + "vw";
+		root.style.height = baek + "vh";
+		root.style.backgroundColor = "salmon";
+
+		console.dir(root);
+
+		
+		const member = ["갱얼쥐", "고영희", "후라이드", "양념"];
+		let count = 1;
+
+		//root에는 addEventListener라는 키값이 있나보군
+		root.addEventListener("click", function() {
+			// addEventListener로 클릭을 할 때 어떤 기능이 작성하는군
+			let result = baek * 2;
+			// result 라는 이름의 변수를 하나 만들어 줄 건데 그거는 상단에 있는 baek이라는 하나의 변수에 *2를 한 값이야.
+			root.style.width = result + "px";
+			// root.style의 width 값은 result 라는 값 + vw이구나 그러면 px로 바꿀 수도 있겠네?
+			// 클릭 시 width 값이 200px로 바뀌는 것을 확인했다.
+			root.style.height = result + "px";
+			// root.style의 height 값은 result 라는 값 + vw 이야. 그러면 vw로 바꿀 수도 있고 다른 값도 넣을 수 있겠구나~
+			root.textContent = member[count] + "님 안녕하세요.";
+			// member라는 배열에서 N번째 를 고를건데, 그 N번째는 count라는 값이고, 그 count값을 확인해보니까 1이야.
+			count = count+1;
+			// count 값을 count 1로 클릭시 바꿔줘 (그러니까 배열 내의 값은 2로 바꿔주는 과정이야.)
+			if(count > member.length-1){
+				// member의 length 값이 얼마인지는 모르겠는데 (length값은 항목의 개수 값이야) 그 전체 개수값의 -1 한 값 그러니까
+				// 항목이 4개인데 count값이 5개가 된다면..(if)
+				count = 0;
+				// 그 count 값을 0으로 변경시켜줘
+			}
+			root.style.backgroundColor = "darkgray";
+		});
+</script>
+</body>
+</html>

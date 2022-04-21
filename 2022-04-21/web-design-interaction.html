@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+
+  </div>
+  <script>
+    /* 
+    ? 도전해보기 ★★★★★★★★★★★★★★★★★★★★★★★★
+    TODO: 아래의 자바스크립트 명령에 대한 의도를 유추 하시오.
+    */
+    document.body.style.padding = "0";
+    // body의 padding 값을 0으로 설정한다.
+    document.body.style.margin = "0";
+    // body의 margin 값을 0으로 설정한다.
+    const root = document.getElementById("root");
+    // ID가 'root' 이라는 div을 root으로 선언한다. "해당 선언은 상수 선언이므로 그 값이 변하지 않는다. (-MDN-)
+    let widthValue = 100;
+    // widthValue라는 변수를 100으로 설정한다. 이 값은 변할 수 있다.
+    let heightValue = 100;
+    // heightValue라는 변수를 100으로 설정한다. 이 값도 물론 변할 수 있다.
+
+            //변수를 선언하지 않는 내장함수(built-in function)는 그냥 처음 아파트 샀을 때 기본옵션으로 DP되어있는 가전제품 (오븐, 인덕션, 시스템에어컨)같은 거라고 생각하고
+            // 그 가전제품들이 아파트에 빌트인 되어있으니까 그거 갖다가 쓰세요. 같은 느낌으로 사용하면 되고, 새로 선언하는 함수는 내가 여기저기 하이마트든 전자랜드든 현대백화점이든 갤러리아백화점이든 기타 등등 인테리어 소품이나 전자제품들 새로 사다가 집안에서 꾸미든 갖다 놓든 부수든 갖고 놀든 내맘대로 새로 구성할 수 있는 함수 정도로 쓰면 되는 듯하다.
+            // 기본으로 제공하는 옵션형 가전제품있는데 쓰실려면 쓰세요 vs 당신이 새로 제품이든 부품이든 사서 조립을 하시든지 말든지 알아서 하세요. 정도로 이해하고 넘어가면 땡.
+
+            //이라고 생각했는데 아~주 적절한 예시는 아닌듯하고, html 상에서 컴퓨터가 인식할 수 있는, 또는 vscode상에서 설정되어있는 언어 즉, 범위(ex width와 height), 색(color,backgroundColor) 같은 어떤 속성 값의 단위 또는 함수 등으로 생각하면 될 듯 하다. 아~~주 정확하게 누구한테 설명은 못하겠지만 나는 어느정도는 이해한 것 같다...!
+    root.style.width = `${widthValue}vw`;
+    // root의 width(넓이)를 widthValue라는 변수로 하는 값을 가져오고, 그 범위는 vw이다. vw는 우리가 html 상에서 사용하는 "내장된 규격 단위(?)" 정도로 이해하면 되니까.
+    root.style.height = `${heightValue}vh`;
+    // root의 height(높이)를 heightValue라는 변수로 하는 값을 가져오고, 그 범위는 vh이다. 마찬가지로 vh도 위와 같다.
+    root.style.backgroundColor = "darkblue";
+    // root의 backgroundColor(배경)은 문자열 darkblue인데 darkblue가 무슨 색인지는 모르겠는데("사실 알지만 모르는척하기"), 아무튼 그 문자열로 된 변수 값으로 설정하겠다.
+    let backgroundColorArray = ["#ff0000", "#333333"];
+    // backgroundColorArray라는 이름을 가진 변수배열 집합체(무슨 뜻인지는 모르겠지만 어쨌든 배열같다. 대괄호가 있으니깐.)("배경색 배열정도로 생각하면 될테지만 모르는 척 넘어가고") 그 배열의 각각요소들은 #ff0000과 #333333이라는 어떤 색상값이다. 무슨 색인지는 모르겠다. 
+    //("Kuler를 찾아보면 빨간색 계열과 회색계열이긴 하지만 모르는 척 넘어가고" → 어쨌든 배열의 순서에 맞게 색이 변하는지는 알아야 되니까 색상을 알아보는 과정은 필요했다. 
+    // 근데 색이 한 25억 개쯤되면 초반 1~3개 정도는 알아볼 것 같다. 그 이상은 좀 ^^;)
+
+    // 중학교 1학년 1학기 맨처음 배운 집합 생각하면 될듯하다. (원소라는 단어 보니까 생각났음) (근데 요즘 중학교 1학년 1학기에는 소인수분해 부터 배우는 듯하다.)
+    let setSwitch = 0;
+    // setSwhitch라는 이름의 변수를 선언할 것인데 그 값은 0이다. 아무튼 바뀔 수도 있는 값이다. 
+    root.addEventListener("click", function() {
+      //  addEventListener라는 빌트인함수(내장함수)를 넣을건데, 그 기능은 '클릭'시에 어떤 함수(기능)을 작동시키도록 할 것이다.
+      if(setSwitch ===0){
+        // 만약에 setSwith가 0과 '같다면' 등호 3번(===)은 같다 (!==)는 다르다. 
+        root.style.backgroundColor = backgroundColorArray[1];
+        // root의 배경색은, backgroundColorArray라는 변수선언 집합에서 2번째 것(0부터 시작이니깐.)을 선택시키겠다.
+        setSwitch = 1;
+        // 그러니까 setSwitch라는 변수 값으로 하는 색과 같다면 backgroundColorArray의 1번 값인 배경색을 #333333으로 변경시킬 테고,
+        } else {
+        // 그렇지 않다면
+        root.style.backgroundColor = backgroundColorArray[0];
+        // backgroundColorArray 배열의 [0] 그러니까 첫 번째 색으로 배경색을 변경시키겠다.
+        setSwitch = 0;
+        // 무슨 색으로? setSwitch 0으로, 그니까 backgroundColorArray 요소집합에서의 [0] → 그러니까 (우리 눈으로 보기에는 )첫 번째 요소(원소)인 #ff0000 (대충 적당히 빨간색)으로 변경시키겠다.
+      }
+      // 결국에는 클릭을 할때마다 setSwitch값이 backgroundColorArray 배열집합의 [0,1] → 색상(해당 집합의 원소)으로 말을 바꾼다면 #ff0000과 #333333 사이에서 배경색 변환이 이루어질테고, 
+      // 초기 설정 배경색 값인 "darkblue"라는(무슨 색인지는 모르겠지만) 문자열로 된 변수선언을 적용한 배경색은 클릭 시에 '절대로' 다시는 나타나지 않는다.
+      // (적어도 해당 배경색배열집합과 event함수를 유지한다면)
+      //하지만 backgroundColorArray의 배열집합에서 원소(다른 색상코드)를 추가하고 click 시에 다시 문자배열을
+      // 변경하도록 addEventListener("click,function()") if/else를 또 한 번 넣어준다면
+      // 다른 색도 넣을 수 있을테..지..?
+
+
+
+
+    });
+
+
+
+
+    
+
+
+  </script>
+</body>
+</html>

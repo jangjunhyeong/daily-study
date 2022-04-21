@@ -3,7 +3,6 @@
 	width: 100vw;
 	height: 100vh;
 	display: flex;
-	align-items: center;
 
 }
 .space{
@@ -13,19 +12,25 @@
 	// opacity: 0.1;
 }
 // 처음엔 container tag에 margin 값만 주었다가,
-//임의의 세로선이 있으면 좋겠다고 싶어서 20vw의 div을 하나 만들어서
+//임의의 세로선이 있으면 좋겠다 싶어서 20vw의 div을 하나 만들어서
 // 글자를 정렬해보았다.
 .con{
 	font-family: 'Kite One', sans-serif;
 	font-size: 0.8rem;
+	//정말 font-size가 '생각보다' 컸다.
+
 	// Q1- font-size 설정시 rem을 쓸 때 가능한 자연수로 적는 게 좋은가요?
-	// 그 이유는 무엇인가요? 값이 깔끔하게 떨어지는 것 보다, 가능한 좋게 보이는 게
+	// 그 이유는 무엇인가요? 값이 깔끔하게 떨어지는 것 보다, 어떻게 보이는지가
 	// 중요한 것이 아닐까 하는 생각이 들었습니다.
 
 	color: gray;
 	// margin-left: 20vw;
 	position: relative;
 	right: 0.1vw;
+	margin-top: 30vh;
+	// 무작정 just, align -center 주는 것 보다는
+	//position 또는 margin 값을 조금씩 변화를 주면서
+	// 좀 더 적합하다고 생각하는 값을 입력해서 위치를 조정해주기.
 
 	&>p{
 		margin-bottom: 1vh;
@@ -34,13 +39,13 @@
 	&>p:nth-child(3){
 		position: relative;
 		right: 0.1vw;
-		// If와 And의 위치가 (값이 같음에도 불구하고, 위치가 맞지 않아 조정하였다.)
+		// If와 And의 '수치상으로는' 위치의 값이 같음에도 불구하고, 위치가 맞지 않아 조정하였다.
 	}
 
 	&>p:nth-child(4){
 		position: relative;
 		right: 0.1vw;
-		//위치 조정을 위한 position:relative
+		//위치 조정을 위한 position
 	}
 
 	&>p:nth-child(4)>span{

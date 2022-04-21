@@ -1,0 +1,52 @@
+*{margin: 0; padding: 0;}
+#root{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+
+}
+.space{
+	width: 20vw;
+	height: 100vh;
+	// background-color:lightgray;
+	// opacity: 0.1;
+}
+// 처음엔 container tag에 margin 값만 주었다가,
+//임의의 세로선이 있으면 좋겠다고 싶어서 20vw의 div을 하나 만들어서
+// 글자를 정렬해보았다.
+.con{
+	font-family: 'Kite One', sans-serif;
+	font-size: 0.8rem;
+	// Q1- font-size 설정시 rem을 쓸 때 가능한 자연수로 적는 게 좋은가요?
+	// 그 이유는 무엇인가요? 값이 깔끔하게 떨어지는 것 보다, 가능한 좋게 보이는 게
+	// 중요한 것이 아닐까 하는 생각이 들었습니다.
+
+	color: gray;
+	// margin-left: 20vw;
+	position: relative;
+	right: 0.1vw;
+
+	&>p{
+		margin-bottom: 1vh;
+	}
+
+	&>p:nth-child(3){
+		position: relative;
+		right: 0.1vw;
+		// If와 And의 위치가 (값이 같음에도 불구하고, 위치가 맞지 않아 조정하였다.)
+	}
+
+	&>p:nth-child(4){
+		position: relative;
+		right: 0.1vw;
+		//위치 조정을 위한 position:relative
+	}
+
+	&>p:nth-child(4)>span{
+		color: black;
+		// border-bottom: 0.1px solid black;
+		// border-bottom도 주었지만 쓸 데 없이 눈에 띄어서 별로였다.
+
+	}
+}

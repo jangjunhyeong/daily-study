@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="root">
+		<div></div>
+	</div>
+
+	<script>
+		const root = document.getElementById("root");
+		console.dir(root);
+		console.log(root.children);
+		console.log(root.children[0]);
+		console.dir(root.children[0]);
+		// 이거 어차피 문자열 꾸러미인데 그냥 한번에 변수에다가 저장하면 안돼?//
+		const textArray = ["안녕하세요!!!!!!!!!!!!!!!!!!행복한 금요일입니다 ^^!!!!!!!!!!!!!!!!!!!!!!!", "내일은 토요일이네요^^!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", "모레는 심지어 일요일!", "글피는 ㅡㅡ", "화요일은 아 맞다 수분크림 사야되는데 지금 생각났다"]
+
+		document.body.style.width = "100vw";
+		document.body.style.height= "100vh";
+		document.body.style.backgroundColor = "salmon";
+		root.children[0].textContent = textArray[0];
+
+		// 알고리즘 구상 : 문서를 클릭할 때마다 텍스트가 바뀌었으면 좋겠어.
+		// 1. 텍스트 목록이 필요할 것 같네?
+		// 2. 목록은 배열을 순서대로 쓴다던데?
+		// 3. 순서는 숫자니까 더하기 1 만 시켜주면 되겠군 ^.^!
+		// 4. 숫자는 어떻게 덧셈을 시키지? ^O^ ??
+		// 5. 숫자 변수 하나를 만들어주면 되겠군 ^.^!
+
+		// root.children[0].textContent = "안녕하세요 ^0^ 행복한 금요일입니다 ^(^-^)~^(^-^)~"
+		// 위에 있으니 지워도 된다.
+		// let changeText = "내일은 토요일이여~ Q(^-^)====O "
+		// 위에 textArray에 있으니까 지워도 된다.
+
+		document.body.addEventListener('click', function(){
+			root.children[0].textContent = textArray[1];
+			//바꾸는 게 아니라 재할당 (assignment) 시키는 겁니다
+			// 문서의 body 부분을 클릭하면 두 번째 인수로 자리잡혀있는 함수 내용을 실행시켜주~
+			// 함수 내용이 뭐냐면 사람들이 이거를 알고리즘이라고 부르더라
+			// root에 있는 자식에 0번째 있을거거든 아마 그것도 태그일거여 거기에 text node 키에 변수 문자열
+			// "재할당해줘";
+
+
+		});
+
+	</script>
+</body>
+</html>

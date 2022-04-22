@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="root">
+		<div id="circle"></div>
+	</div>
+
+
+	<script>
+		document.body.style.padding="0";
+		document.body.style.margin="0";
+		
+		const root = document.getElementById("root");
+		const circle = document.getElementById("circle");
+		// document에서 Id의 이름이 각각 root , circle인 div을 root, circle 이라는 이름으로 선언한다.
+
+		console.log(root);
+		console.dir(root);
+		console.log(circle);
+		console.dir(circle);
+		//일단 콘솔 다 찍어보고
+		let hundred = 100;
+		// hundred라는 이름의 변수를 정해주고 그 값은 100
+		let flex = "flex";
+		let center = "center";
+		// flex도 넣어주고 싶고 center도 넣어주고 싶습니다 → 각각 flex , center 라는 문자열의 변수를 제작해서 내장함수에 적용시켜버리세요.
+		//center는 justify, align 모두 동일하게 주면 되니까 한 번만 선언시키면 된다.
+		console.log(flex);
+		console.dir(flex);
+		console.log(center);
+		console.dir(center);
+
+
+
+		console.log(hundred);
+		console.dir(hundred);
+		let th = 30;
+		// th라는 이름의 변수를 선언할건데 그 값은 상수 30이다.
+		console.log(th);
+		console.dir(th);
+		let sb = "skyblue"
+		console.log(sb);
+		console.dir(sb);
+		// sb 라는 이름의 변수를 정해주고 그 값은 문자열 "s k y b l u e "
+
+		let blue = "blue"
+		console.log(blue);
+		console.dir(blue);
+		//red 라는 이름의 변수를 정해주고 그 값은 문자열 "b l u e"
+		root.style.width=`${hundred}vw`;
+		root.style.height=`${hundred}vh`;
+		root.style.backgroundColor=`${sb}`;
+		root.style.display =`${flex}`;
+		root.style.justifyContent=`${center}`;
+		root.style.alignItems=`${center}`;
+
+		circle.style.width=`${th}vw`;
+		circle.style.height=`${th}vw`;
+		//가로 세로의 viewport 범위가 같아야 원이 되는데 이걸 까먹게 되다니, script 쓰다보니 태초마을로 돌아왔다.
+		circle.style.backgroundColor=`${blue}`;
+		circle.style.borderRadius=`${hundred}vw`;
+		// 단위를 자꾸 까먹으니까 적용이 안된다. 백틱을 자꾸 까먹으니까 적용이 안된다. 둘 중 하나만 기억하니까 자꾸 적용이 안된다. 백틱위치를 자꾸 이상하게 잡으니까 안된다.
+		
+	</script>
+</body>
+</html>       

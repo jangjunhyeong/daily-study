@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#root{
+			width: 100vw;
+			height: 100vh;
+			background-color: #c3c3c3;
+		}
+
+		#root>div{
+			width: 100px;
+			height: 100px;
+			border: 1px solid darkslategray;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<div id="root">
+		<div>1</div>
+		<div>2</div>
+	</div>
+
+	<script>
+		const root = document.getElementById("root");
+		const one = root.children[0]; // text node에 문자열 1 이라고 써놓음
+		const two = root.children[1]; // text node에 문자열 2 라고 써놓음
+		// 쿼리셀렉터보다는 부모-자식 태그로 써버릇 하기// 
+		// const test = document.querySelector('#root>div:nth-child(2)');
+		//쿼리셀렉터는 쓰려면 쓰되 일단 볼줄 알아야한다.
+
+		two.textContent = "이건 두 번째다!"
+		// 새로 재 할당 =는 같다가 아니라 '대입'이다.//
+		console.log(root);
+		console.dir(root);
+		console.dir(root.children[0]);
+		console.log(typeof two.textContent); 
+
+		// event : '무슨 일이 일어났다!, 발생했다!'
+		// one.addEventListener('click', function(){});
+		console.dir(one);
+		one.addEventListener('wheel', function(){
+			two.style.transition = "2s";
+			two.textContent ="클릭했다!!";
+			two.style.backgroundColor = "#ff6666";
+			two.style.width = "200px";
+
+
+
+			if (two.style.backgroundColor === "rgb(255, 102, 102)") {
+				// hex 방식은 해결이 되지 않는구나 
+			two.style.backgroundColor = "blue";
+
+			}
+
+
+		});
+
+
+
+	</script>
+</body>
+</html>

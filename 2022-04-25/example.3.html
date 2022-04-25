@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<button id="click-button">클 릭 하 세 요!</button>
+	<ul id="target">
+		<li class="items">items-1</li>
+		<li class="items">items-2</li>
+		<li class="items">items-3</li>
+		<li class="items">items-4</li>
+		<li class="items">items-5</li>
+		<li class="items">items-6</li>
+		<li class="items">items-7</li>
+	</ul>
+
+	<script>
+		const clickButton = document.getElementById('click-button');
+		const target = document.getElementById('target').children;
+		console.log(target);
+		
+		clickButton.addEventListener('click', function(){			
+		for(let i = 0; 1 < target.length; i++) {
+			target[i].style.listStyle="none"
+			// 조작하려고 변수를 하나 터줬다.//
+	
+			if(target[i].textContent === "items-3" ){
+				target[i].style.visibility = "hidden";
+				// visibility = "hidden" 하면 항목의 공간은 차지하되 보이지만 않게 할 수 있다.
+			}
+		
+		}		
+			// alert('hello hello');
+		});
+
+		clickButton.addEventListener('click', function(){			
+		for(let i = 0; 1 < target.length; i++) {
+	
+			if(target[i].style.visibility === "hidden" ){
+				target[i].style.visibility ="visible";
+				target[i].textContent = "짜잔~ 빨간색의 테두리가 생기고 너비와 높이는 500px이 되었습니다.";
+				target[i].style.width =`500px`;
+				target[i].style.height = `500px`;
+				target[i].style.border="1px solid red";
+				target[i].style.listStyle="none";
+			}
+		
+		}		
+		});
+		clickButton.addEventListener('click', function(){			
+		for(let i = 0; 1 < target.length; i++) {
+	
+			if(target[i].style.visibility === "visible" ){
+				target[i].style.visibility ="hidden";
+			
+			}
+		
+		}		
+		});
+	
+	
+
+
+			//HTMLCollection[] 배열 형태로 가지고 있다는 걸 알게 됨//
+	</script>
+
+
+</body>
+</html>

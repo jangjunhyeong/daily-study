@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="root">
+		<button>day</button>
+		<div>좋은 아침입니다!</div>
+		<div>편안한 밤 되십시오.</div>
+	</div>
+
+
+	<script>
+		document.body.style.margin = `0`;
+		document.body.style.padding = `0`;
+
+		// const test = document.querySelector('#root>button');
+		// css 방식의 해당 문서 선택
+		const root = document.getElementById("root");
+		const clickBtn = root.children[0]
+		console.dir(root);
+		// 식별된 무언가의 데이터에서 꺼내 온 것
+		console.log(clickBtn);
+		const d = root.children[1]
+		const n = root.children[2]
+		console.log(d);
+		console.log(n);
+
+
+		let bgColorValue = "salmon";
+
+		root.style.width = `100vw`;
+		root.style.height = `100vh`;
+		root.style.backgroundColor =`${bgColorValue}`;
+
+		d.style.display=`none`;
+		n.style.display=`none`;
+		// 일단 처음에는 다 안보이게 해놓기
+		n.style.color=`white`;
+		n.style.fontSize=`2rem`;
+		d.style.fontSize=`2rem`;
+
+		
+
+		let data = true;
+		console.log(clickBtn);
+
+		clickBtn.addEventListener('click', function(){
+			// console.log('hello');
+			// hello 라고 뜨는군 - 잘 작동하는구나
+
+			// console.log(root.style.backgroundColor);
+			console.log(clickBtn);
+			if(data === true) {
+				console.log('data 값은 :' + data);
+				data = false;
+				root.style.backgroundColor =`#fff`;
+				d.style.display="";
+				// 비워두면 default
+				n.style.display="none";
+				root.style.transition =`2s`;
+				clickBtn.textContent =`day`;
+				clickBtn.style.color=`black`;
+				clickBtn.style.width=`5vw`;
+				clickBtn.style.height=`10vh`;
+
+			} else { //else의 data !== true, data === false
+				console.log("지금 else로 data 값은 :"+ data);
+				data = true;
+				root.style.backgroundColor=`#000`;
+				clickBtn.textContent =`night`;
+				root.style.transition =`2s`;
+				clickBtn.style.color=`white`;
+				d.style.display=`none`;
+				n.style.display=``;
+
+
+
+
+			}
+
+
+		});
+
+	</script>
+</body>
+</html>

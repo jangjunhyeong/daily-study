@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="root"></div>
+
+	<script>
+		const a =document.querySelector("#root");
+
+		let value = 100; //변수로 꺼냈다.//
+		let colorValue = 333;
+		//변할 예정이니까
+		a.style.width = value +"vw";
+		a.style.height = `${value}vh`;
+		a.style.backgroundColor= `#${colorValue}`;
+
+		a.addEventListener("click", function(){
+
+			let result;
+			console.log("결과 연산이 시작되기 전 : " + value + " 이 값이다.");
+			result = value/2;
+
+			a.style.width = result +"vw";
+			a.style.height = result +"vh";
+
+			value = result;
+			console.log("결과 값을 value 변수에 대입시키고 난 후의 value 값" + value);
+		
+		});
+
+
+	</script>
+</body>
+</html>

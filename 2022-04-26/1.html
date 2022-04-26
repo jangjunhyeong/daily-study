@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+
+<script>
+	const arr = ["가","나","다","라"];
+	console.log(arr);
+	// 데이터는 문서안에 들어있다. 찾을 방법이 없다.
+	// RAM : 컴퓨터 위장 / 이미 먹은 상태
+	// 그래서 연결점을 하나 만들어 주는 것 = 그게 변수
+	const test = ["가","나","두","라"]
+
+	console.log(arr[2] === test[2]);
+	if(arr[2]===test[2]){
+		console.log("야홍!!")
+	} else {
+		test[2] = "다";
+		console.log(test);
+	} //16번 행 if() 영역이야
+
+	if(arr[2]===test[2]){
+		arr[2] = "다다다";
+		test[2] = "다다다";
+		console.log(arr);
+		console.log(test);
+	} else {
+		console.log("메렁-");
+	}
+	// js에서는 위에서 아래로 찍히기 때문에 if절이 바뀐 부분부터는 다르다.
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="root">
+		<div class="con">
+			<div></div>
+			<div>
+				<div>
+					<div>
+						<p>Lorem title</p>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum libero aspernatur hic ipsam omnis officiis aut maiores sed neque asperiores sint id incidunt, expedita commodi qui quaerat labore deleniti dolorem laudantium alias nostrum atque! Itaque odit veritatis molestiae magni odio, at architecto animi optio vitae cum explicabo numquam labore aspernatur nam, </p>
+					</div>
+					<div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+
+	<script>
+	const b=`100`;
+	console.log(b);
+	// 100이라는 값을 가진 상수 선언했다.
+	document.body.style.margin=`0`;
+	document.body.style.padding=`0`;
+	const root = document.getElementById(`root`);
+	console.log(root);
+	console.dir(root);
+	root.style.width=`${b}vw`;
+	root.style.height=`${b}vh`;
+	root.style.display=`flex`;
+	root.style.justifyContent=`center`;
+	root.style.alignItems=`center`;
+	root.style.maxWidth=`${b}%`;
+	root.style.maxHeight=`${b}%`;
+	// 너비높이 넘치지 않게 조절//
+
+	const con = document.getElementsByClassName('con');
+	con[0].style.width=`60vw`;
+	con[0].style.height=`60vh`;
+	con[0].style.display=`flex`;
+
+
+	con[0].children[0].style.width=`${b/4}vw`;
+	// 가로폭이 100vw에서 1/4이니까 100이라는 상수 지정 후 n/4 했다.
+	con[0].children[0].style.height=`${b/4}vw`;
+	con[0].children[0].style.backgroundColor=`pink`;
+	con[0].children[0].style.marginRight=`2vw`;
+
+	con[0].children[1].style.width=`${b/4+3}vw`;
+	// 여백을 줘야해서 width값을 조금 더 줬다. 어차피 나눗셈먼저 연산이 되니까
+	// 문제도리 건 없었다.
+	con[0].children[1].style.height=`${b/4}vw`;
+	con[0].children[1].style.display=`flex`;
+	con[0].children[1].style.flexDirection=`column`;
+
+	
+	con[0].children[1].children[0].style.width=`inherit`;
+	con[0].children[1].children[0].style.height=`inherit`;
+	con[0].children[1].children[0].style.display=`flex`;
+	con[0].children[1].children[0].style.flexDirection=`column`;
+	con[0].children[1].children[0].style.justifyContent=`space-between`;
+
+
+
+	con[0].children[1].children[0].children[0].style.width =`inherit`;
+	con[0].children[1].children[0].children[0].style.height =`inherit`;
+	con[0].children[1].children[0].children[0].style.display =`flex`;
+	con[0].children[1].children[0].children[0].style.flexDirection=`column`;
+	con[0].children[1].children[0].children[0].style.justifyContent=`flex-start`;
+
+		//Q1 첫번째 p tag의 높이가 fontSize에 비해 비정상적으로 큽니다.
+		//그래서 flex 의 하위 속성을 사용해도 첫 번째 p tag가 위로
+		// 붙지 않아보입니다.
+
+
+	con[0].children[1].children[0].children[0].children[0].style.fontSize=`4rem`;
+	// 바로 직계자식도 children을 [0]으로 해줘야한다. 
+	con[0].children[1].children[0].children[0].children[0].style.color=`salmon`;
+	con[0].children[1].children[0].children[0].children[0].style.fontWeight=`100`;
+	con[0].children[1].children[0].children[0].children[0].style.marginBottom=`1vh`;
+
+	con[0].children[1].children[0].children[0].children[1].style.fontSize=`0.5rem`;
+	con[0].children[1].children[0].children[0].children[1].style.color=`salmon`;
+
+
+
+
+
+
+
+	con[0].children[1].children[0].children[1].style.
+	display=`flex`;
+	con[0].children[1].children[0].children[1].style.
+	flexDirection=`row`;
+	con[0].children[1].children[0].children[1].style.
+	justifyContent=`space-between`;
+	con[0].children[1].children[0].children[1].children[0].style.width=`${b/4/3}vw`;
+	con[0].children[1].children[0].children[1].children[0].style.height=`${b/4/3}vw`;
+	con[0].children[1].children[0].children[1].children[0].style.backgroundColor=`salmon`;
+	
+	con[0].children[1].children[0].children[1].children[1].style.width=`${b/4/3}vw`;
+	con[0].children[1].children[0].children[1].children[1].style.height=`${b/4/3}vw`;
+	con[0].children[1].children[0].children[1].children[1].style.backgroundColor=`salmon`;
+
+	con[0].children[1].children[0].children[1].children[2].style.width=`${b/4/3}vw`;
+	con[0].children[1].children[0].children[1].children[2].style.height=`${b/4/3}vw`;
+	con[0].children[1].children[0].children[1].children[2].style.backgroundColor=`salmon`;
+
+
+
+
+
+
+	
+</script>
+
+</body>
+</html>

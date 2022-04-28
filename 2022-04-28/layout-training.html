@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=!, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="root">
+		<div class="con">
+			<div class="box">A</div>
+			<div class="box">B</div>
+		</div>
+	</div>
+
+
+	<script>
+		document.body.style.margin = 0;
+		document.body.style.padding = 0;
+
+		const root = document.getElementById("root");
+		console.log(root);
+		console.dir(root);
+		
+		const box = document.getElementsByClassName("box");
+		const f = "flex";
+		const c = "center";
+		const b= 100; 
+		
+		root.style.width = `${b}+vw`;
+		root.style.height = `${b}vh`;
+		root.style.display = `${f}`;
+		root.style.justifyContent = `${c}`;
+		root.style.alignItems = `${c}`;
+		
+		const con = document.getElementsByClassName("con");
+		console.log(con[0]);
+		console.dir(con[0]);
+		// 하위 속성까지 다 확인되었음
+		
+		con[0].style.width =`30vw`;
+		con[0].style.height = `30vw`;
+		con[0].style.border = `1px solid black`;
+		con[0].style.display=`f`;
+
+
+		box[0].style.backgroundColor="skyblue";
+		box[0].style.color="black";
+		box[0].style.top=`8vh`;
+		box[0].style.left=`5vw`;
+		box[0].style.zIndex=`1`;
+		box[0].style.fontSize=`2rem`;
+		box[0].style.width=`14vw`
+		box[0].style.height=`14vw`
+		box[0].style.display=`${f}`;
+		box[0].style.justifyContent=`${c}`;
+		box[0].style.alignItems=`${c}`;
+		box[0].style.position="relative";
+		
+		box[1].style.backgroundColor="darkslategray";
+		box[1].style.color=`white`;
+		box[1].style.left=`10vw`;
+		box[1].style.zIndex=`1`;
+		box[1].style.fontSize=`2rem`;
+		box[1].style.width=`14vw`
+		box[1].style.height=`14vw`
+		box[1].style.display=`${f}`;
+		box[1].style.justifyContent=`${c}`;
+		box[1].style.alignItems=`${c}`;
+		box[1].style.position="relative";
+		
+		// const target = document.getElementsByClassName("con")[0].children
+		// for(let i=0; 1<target.length; i++){
+		// target[i].style.width=`14vw`;
+		// target[i].style.height=`14vw`;
+		// target[i].style.display=`${f}`;
+		// target[i].style.justifyContent=`${c}`;
+		// target[i].style.alignItems=`${c}`;
+		// target[i].style.position="relative";
+		// }
+
+		// for 문 때문에 작동이 안되나 싶어서 일단 주석처리 했습니다.
+				
+		let va = 2;
+		console.log(va);
+
+		box[0].addEventListener("click", function(){
+			va++
+			box[0].style.zIndex = va;
+			console.log(box[0].style.zIndex)
+		});
+		box[1].addEventListener("click", function(){
+			va++
+			box[1].style.zIndex = va;
+			console.log(box[1].style.zIndex)
+		});
+
+		// 일단 우여곡절 끝에 z-index값을 추가하는 방식으로 끝냈습니다.
+		// 10개의 div이라면 z-index 값을 box div을 가둔 container의 children-legth 값으로 바꾸기..?
+
+
+
+
+	</script>
+</body>
+</html>

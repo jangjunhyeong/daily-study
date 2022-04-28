@@ -8,12 +8,17 @@
 </head>
 <body>
 	<div id="root">
-		<div></div>
+		<div>
+			<section>
+				<article>hello!</article>
+			</section>
+		</div>
 	</div>
 
-
-
 	<script>
+		const hello =document.querySelector("#root>div>section>article").textContent;
+		console.log(hello);
+		
 	</script>
 </body>
 </html>

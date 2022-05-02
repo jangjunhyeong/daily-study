@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script>
+    const root = document.getElementById("root");
+    // document(문서)에 있는 root 이라는 id를 가진 div을 'root' 이란 상수로 선언하기
+    root.style.fontSize = "5rem";
+    // root의 fontSize는 5rem 이다.
+
+
+
+    let isStatus = true;
+    // isStatus 라는 변수를 선언하고 그 값은 true이다.
+    let current = 0;
+    // current 라는 변수를 선언하고 그 값은 0이다.
+    root.textContent = current;
+    // root의 textContent는 current 이다. (근데 그 값은 앞에서 확인할 수 있듯 0이다.)
+    root.addEventListener('click', function () {
+      // root에 EventListene를 추가하고 클릭 시에 함수가 작동
+      if (isStatus === true) {
+        // 만약 isStatus가 true라면
+        current++;
+        // current 값을 1씩 증가
+        if (current >= 10) {
+        //  만약 current가 10이상 이라면
+        isStatus =false;
+        // isStatus는 false를 대입시킨다. 이 대입한 값이 false인게 중요한게 아니라 true가 아닌 어떤 값을 그냥 임의로 설정해주면 된다.
+				// true 일때만 current 값이 10이 된 후부터 false로 작동이 된다. (true false가 함수에서 0,1로 사용하는 단어이니 해당 단어를 쓴 듯 하다.)
+				//current>10 이되면 값이 11까지 올라갔다가 다시 내려가게 되는 것을 
+        }
+        // 
+        root.textContent = current;
+				console.log(current);
+        //  root의 textContent에 current를 대입시킨다. → 그 current값이 그래서 몇인데? 0~10 사이겠지
+      } else {
+        // 아니라면
+        current--;
+        // current 값을 감소시킨다.
+        if (current <=0) {
+          // current가 0보다 작거나 같으면 current<0 이라면 -1까지 간다. 그래서 current값에 0까지 포함한 current <=0을 써야만 한다.
+          isStatus =true;
+          // isStatues에 true를 대입시킨다. true가 아닌 값을 입력하게 되면 음수로 무한정 내려가게 된다.
+        }
+        // 
+        root.textContent = current;
+				console.log(current);
+        // root의 textContent에 current를 대입시킨다. → 그래서 current가 몇인데? 마찬가지로 0~10 사이겠지 
+      }
+    })
+  </script>
+
+</body>
+
+</html>

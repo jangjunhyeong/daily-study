@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="root">
+
+	</div>
+
+
+
+<!-- 	
+	<script>
+		let a = "겜";
+		let b = "블";
+		let c = "러";
+		let originalData = "텀";
+		let text = originalData + b + c; 
+		const root = document.getElementById("root");
+		console.dir(root);
+		text =a+b+c;
+		console.log(text[0]);
+		root.textContent = text;
+		
+				// "쌍따옴표만 있으면 배열로 써서 그 값을 가져올 수 있다."
+				</script> -->
+
+		<script>
+
+			const root = document.getElementById("root");
+			let innerValue = "나는 지금 코딩하고 있다"
+			root.textContent = innerValue;
+			root.style.color = "#000";
+
+
+			// root.addEventListener("click",function(){
+			// 	root.style.color ="#000"
+			// 	console.log(root.style.color);
+
+
+			// 	if(root.style.color==="rgb(0,0,0)") {
+			// 		root.style.color = "#fff";
+			// 	}
+			// })
+
+				let current = 0;
+				root.addEventListener('click',function(){
+					
+					if (current < 5){
+						current++;
+						root.textContent =current;
+						console.log(current);
+					}else{
+						current--;
+						console.log(current);
+					}
+					
+				})
+
+			// root.addEventListener("click", function(){
+
+			// 	if(current ===1){
+			// 		console.log('야호')
+			// 		current =0;
+			// 		root.style.color="#fff";
+			// 		root.style.backgroundColor="#bc0000"
+			// 		root.style.height=`90vh`;
+			// 	}else {
+
+			// 		console.log("쭈굴쭈굴");
+			// 		current = 1;
+			// 		root.style.color="#bc0000";
+			// 		root.style.backgroundColor="gray"
+			// 		root.style.height=`50vh`;
+			// 	}
+			// });
+
+
+
+
+
+		</script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<ul id="root">
+		<li class="menu">menu-items-1</li>
+		<li class="menu">menu-items-2</li>
+		<li class="menu">menu-items-3</li>
+		<li class="menu">menu-items-4</li>
+		<li class="menu">menu-items-5</li>
+	</ul>
+	<button>클릭혀</button>
+
+
+
+	<script>
+		const root = document.getElementById('root')
+		const menu = document.querySelectorAll('.menu')
+		// querySeletor 는 태그에서 직접 선택하여 가져오는 거라서 menu가 아니라 .menu로 써야된다. class를 가져와야하니까
+		// class name이 아니니깐.
+		const button = document.querySelector('button');
+		// 버튼을 가져오기 
+		console.log(root);
+		console.log(menu);
+		root.style.width = "500px";
+		root.style.height ="500px";
+		root.style.backgroundColor = "olive";
+
+		let isStatus= true;
+
+		button.addEventListener('click',function(){
+
+			if(isStatus===true){
+				isStatus=false;
+			
+				for(let i=0; i<menu.length; i++){	
+					menu[i].style.display="none";
+					root.style.backgroundColor="olive";
+				}
+			} else{
+					isStatus=true;
+				root.style.backgroundColor="salmon";
+
+				for(let i=0; i<menu.length; i++){	
+					menu[i].style.display="";
+					root.style.backgroundColor="salmon";
+				}			
+			}
+		})
+
+
+	
+	</script>
+</body>
+</html>

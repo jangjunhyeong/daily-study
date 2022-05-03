@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div id="root">
-	<button>Click!</button>
+	<button>click</button>
 	</div>
 </body>
 
@@ -24,12 +24,34 @@
 	root.style.justifyContent=`center`;
 	root.style.alignItems=`center`;
 	
+// root 을 쓰지 않고 그냥 document.body.style을 바꿔줬으면 됐을 듯!
+
+
+	let data = true
 	const button = document.querySelector("#root>button")
 	console.log(button);
 	button.style.width=`10vw`;
-	button.style.height=`10vh`;
+	button.style.height=`5vh`;
+	button.style.borderRadius=`2vw`;
+	button.style.border=`0px`;
+
+	// button의 style 값 부여
 	button.addEventListener('click',function(){
-		root.style.backgroundColor ='olive';
-	})
+		if (data === true){
+			data=false;
+			root.style.backgroundColor='salmon';
+		}
+		else{
+			(data === false)
+			data=true;
+			root.style.backgroundColor='olive';
+			}
+		
+			// 다크모드처럼 응용해서 쓰기
+			
+		
+
+	});
+	// button 클릭 시 root의 backgroundColor가 변경된다.
 </script>
 </html>

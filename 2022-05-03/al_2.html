@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="root">
+		<button>A</button>
+		<button>B</button>
+		<div id="text">			
+			~( . . )/ 제가 보이시나요?
+		</div>
+	</div>
+
+
+
+	<script>
+		document.body.style.margin=0;
+		document.body.style.padding=0;
+
+		const root =document.getElementById('root');
+		root.style.width="100vw";
+		root.style.height="100vh";
+		root.style.backgroundColor="olive";
+		const text = document.getElementById('text');
+		text.style.color="olive";
+		root.style.display="flex";
+		root.style.justifyContent="center";
+		root.style.alignItems="center";
+		text.style.marginLeft="10vw";
+
+		const A = document.querySelector('#root>button:nth-child(1)');
+		console.log(A);
+		A.style.width="10vw";
+		A.style.height="10vw";
+		A.style.borderRadius="20vw";
+		A.style.border="none";
+		A.style.backgroundColor="salmon";
+		A.style.color="white";
+		
+		const B = document.querySelector('#root>button:nth-child(2)');
+		console.log(B);
+		B.style.width="10vw";
+		B.style.height="10vw";
+		B.style.borderRadius="20vw";
+		B.style.border="none";
+		B.style.backgroundColor="darkblue";
+		B.style.color="white";
+
+
+		A.addEventListener('click',function(){
+			root.style.backgroundColor="dimgray";
+			text.style.color="white";
+			root.style.transition="2s";
+			alert("확인을 누르시면 배경은 어둡게, 글씨는 밝게 변경됩니다.");
+		})
+
+		B.addEventListener('click',function(){
+			root.style.backgroundColor="white";
+			text.style.color="dimgray";
+			root.style.transition="2s";
+			alert("확인을 누르시면 배경은 밝게, 글씨는 어둡게 변경됩니다.");
+		})
+	</script>
+</body>
+</html>

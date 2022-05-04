@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1 id="alarm">따르릉!!!</h1>
+	<button id="a">A</button>
+	<button id="b">B</button>
+	<!-- button#A{a}+button#B{b} 하면 만들어짐-->
+
+<script>
+let a ="똑";
+let b ="딱";
+let isStatus = true;
+let current =0;
+
+const alarm = document.querySelector('#alarm');
+const Abutton =document.querySelector('#a');
+const Bbutton =document.querySelector('#b');
+console.dir(alarm);
+
+Abutton.addEventListener('click',function(){
+
+	const timer = setInterval(function(){
+	if(isStatus===true){
+		alarm.textContent=a;
+		// console.log(a);
+		isStatus = false;
+	
+	}else {
+		alarm.textContent=b;
+		// console.log(b);
+		isStatus = true;
+		current++;
+		// console.log(`지금 똑딱이 횟수는 ${current}입니다.`);
+		alarm.style.margin=current+"px";
+	}
+	
+	
+	
+	},100)
+
+	Bbutton.addEventListener('click',function(){
+		clearInterval(timer);
+
+	})
+})
+</script>
+</body>
+</html>

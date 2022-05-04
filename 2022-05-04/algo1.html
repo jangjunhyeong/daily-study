@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="root">
+		<button>A</button>
+	</div>
+
+
+
+<script>
+	const button = document.querySelector("#root>button");
+	console.log(button);
+	// 버튼 확인//
+
+
+
+	// 얄궂은 방법 1 
+	// button.addEventListener("click",function(){
+	// 	console.log("hello");
+	// 	console.log("hello");
+	// 	console.log("hello");
+	// 	console.log("hello");
+	//        ·
+	//        ·
+	//        ·
+	// 55번 입력하면 클릭했을 때 한 번에 55개 나온다.
+	// });
+
+	//해볼만 한 알고리즘
+// 만약(if) 콘솔창에 hello가 뜬다면, 55번 반복해줘. → if 문을 써서 한다면 이건 어떻게 해야 할까?
+// for 문 돌리기
+
+		let h = "hello"
+		let a = h.substr(-5,1);
+		// 문자열 문법으로 해결해보았다! 해피!
+		// 뒤에서 4번째부터 끝까지 쭉 되는 방식
+
+		// let stringValue='hello';
+		// log(stringValue[0])
+		// 해도 되겠지!
+
+	button.addEventListener("click",function(){
+		for(i=0; i<55; i++)
+		// 55보다 54에서 55 넘어가는 구간까지만 반복을 진행시켜줘!
+		console.log(a);
+		//ello~ 만 뜬다 해피!
+
+
+
+		// 안녕은 한 번만 찍힌거다.
+		// 그래서 55번 한 번더 해줘야됨.
+		// for(i=0; i<55; i++)
+		// console.log("안녕");
+	});
+
+	
+</script>
+
+
+
+</body>
+</html>

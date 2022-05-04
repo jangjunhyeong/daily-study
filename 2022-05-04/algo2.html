@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="root">
+		<h1 id="alarm">버튼을 누르면 똑딱이 시작!</h1>
+		<button class="A">A</button>
+		<button class="B">B</button>
+	</div>
+
+
+
+	<!-- 0 = 똑 , 1= 딱 -->
+<script>
+	const root=document.getElementById("root");
+const A = document.getElementsByClassName("A");
+const B = document.getElementsByClassName("B");
+const alarm =document.getElementById("alarm");
+A[0].addEventListener("click",function(){
+
+
+
+	let current=0;
+	let timer = setInterval(function(){
+		if(current===0){
+			console.log("뚝!");
+			alarm.textContent="똑";
+			current++;
+		} else {
+			{
+				console.log("딱-!");
+				alarm.textContent="딱";
+	
+				current--;
+			}
+		}
+	},500)
+	B[0].addEventListener("click",function(){
+		clearInterval(timer);
+	})
+});
+// 안됐던 이유는 timer가 local 변수였기 때문에 B[0].addEventListener가 먹지 않았던 것이다.
+// 그래서 A[0].addEventListner 함수안에 B[0]~~어쩌구를 포함시켰다.
+
+
+</script>
+
+</body>
+</html>

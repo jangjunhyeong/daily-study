@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{margin: 0;
+		padding: 0;
+	box-sizing: border-box;}
+
+	#root{
+		width: 100vw;
+		height: 100vh;
+		background-color: #ccc;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#root>div{
+		width: 300px;
+		height: 300px;
+		border: 1px solid blue;
+		position: relative;
+		/* 부모가 relative면 자식 div이 absolute라도 따른다. */
+	}
+
+	#root>div>section{
+		width: 100px;
+		height: 100px;
+		border: 1px solid red;
+		position: absolute;
+	}
+
+	#root>div>section:nth-child(1){
+		top:0px; left:0px; 
+		background-color: #ddd;
+		z-index:3;
+	}
+	#root>div>section:nth-child(2){
+		top:20px; left:20px;
+		background-color: #bbb;
+		z-index:2;
+
+	}
+	#root>div>section:nth-child(3){
+		top:40px; left:40px; 
+		background-color: #eee;
+		z-index:1;
+
+	}
+
+
+
+
+	</style>
+</head>
+<body>
+	<!-- 강사님의 마크업 스타일같이 해보기 -->
+
+	<!-- 1. 구조 만들기 2. 인터렉션 3. 스타일링 하는 방식 -->
+	<!--  스타일링먼저 하면 인터렉션을 만드는 데 방해요소가 된다. (코드가 길어지니까) -->
+
+	<div id="root">
+		<div>
+		<section>
+			<button id="close-button">close</button>
+		</section>
+		<section>2</section>
+		<section>3</section>
+		</div>
+
+	</div>
+
+	<script>
+
+		const root = document.getElementById("root");
+		console.log(root);
+		console.dir(root);
+
+		const sections = root.children[0].children;
+		console.log(sections);
+		// 식별을 잘했는지 먼저 콘솔로 구조를 확인해야 된다. 식별이 끝났다면 이제 식별이 끝난 파일이 갖고있는 특징들을 확인
+		// 디자인 상으로는 클릭했을 때 반응이 되어야 하는데...!
+		const clickBtn = document.getElementById('close-button');
+		console.log(clickBtn);
+
+		clickBtn.addEventListener('click',function(){
+			// alert("hello");
+			//경고창이 뜨는 걸 보니 반응을 잘 하는구나~
+			sections[0].style.display="none";
+			sections[1].style.display="none";
+			
+
+
+		});
+	</script>
+
+</body>
+</html>

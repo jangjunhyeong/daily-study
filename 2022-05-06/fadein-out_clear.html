@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="root"></div>
+	<button id="click-button">click</button>
+
+
+
+
+
+	<script>
+		const root = document.getElementById('root');
+		// console.log(root);
+		// root 확인
+		const clickBtn = document.getElementById('click-button');
+		// console.log(clickBtn);
+		// button 확인
+
+		root.style.width='300px';
+		root.style.height='300px';
+		root.style.backgroundColor='darkslategray';
+
+	
+
+		// 상수에 ''을 붙히면 어떡하니//
+		let opacityValue=0;
+		let isStatus = true;
+
+		root.style.opacity=opacityValue;
+		clickBtn.addEventListener('click',function(){
+
+			if(isStatus===true){
+			
+				let timer = setInterval(function() {
+					console.log(opacityValue);
+					opacityValue = opacityValue + 0.1;
+					root.style.opacity=opacityValue;
+					// transition 값을 넣으면 키프레임과 상관없이 나타난다.
+					// transition 사용은 지양 - setInterval 과 충돌됨
+					// parseInt , parseFloat 
+					if(opacityValue>=1){
+						clearInterval(timer);
+						isStatus=false;
+						// parseInt('2.7755575615628914e-17',0);
+						console.log(isStatus);
+					}
+					},64);
+
+			} else{
+
+				let timer = setInterval(function(){
+					console.log(opacityValue);
+					opacityValue=opacityValue - 0.1;
+					root.style.opacity=opacityValue;
+
+					if(opacityValue<0.0001){
+						clearInterval(timer);
+						isStatus=true;
+						console.log(isStatus);
+					}
+				},64);
+
+			}
+
+
+	
+
+			
+				
+		
+		});
+		
+
+
+	</script>
+
+
+
+</body>
+</html>

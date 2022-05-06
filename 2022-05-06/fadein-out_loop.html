@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="root"><h5>이게 아닌데,<br>내맘은 이게<br>아닌데</h5></div>
+	<button id="click-button">click</button>
+	<!-- <button id="c">Click Me</button> -->
+
+
+	<script>
+		const root = document.getElementById('root');
+		root.style.width="100px";
+		root.style.height="100px";
+		root.style.backgroundColor="#333";
+		const clickBtn= document.getElementById('click-button');
+		// const c =document.getElementById('c');
+
+		let isStatus=true;
+		let opacityValue=0;
+		root.style.opacity = opacityValue;
+
+		clickBtn.addEventListener('click',function(){
+			// console.log(clickBtn);
+			// 버튼에는 문제가 없다.
+			let fade = setInterval(function(){
+				if (isStatus===true){
+					opacityValue=opacityValue + 0.1;
+					root.style.opacity=opacityValue;
+					console.log(opacityValue);
+				}
+				if(opacityValue>0.999){
+				isStatus=false;
+				// clearInterval(fade);
+				}
+				
+			},100);
+
+
+			let fade2 = setInterval(function(){
+				if (isStatus===false){
+					opacityValue=opacityValue -0.1;
+					root.style.opacity=opacityValue;
+					console.log(opacityValue);
+				}
+				if(opacityValue<0){
+				isStatus=true;
+				}
+				},100);
+		});
+// 별안간 의도치 않은 끔찍한 혼종이 발생했다.
+// 근데 infinite loop 방식을 만들고 싶다면 이렇게 만들면 될듯 ^^;
+// 얻어걸린 느낌이 들어서 이상하다.
+
+		// c.addEventListener('click',function(){
+		// 	let fade2 = setInterval(function(){
+				
+		// 		opacityValue=opacityValue-0.1;
+		// 		root.style.opacity=opacityValue;
+		// 		console.log(opacityValue);
+		// 		},500)
+		// })
+		// 다른 버튼으로 제어할수는 있긴함
+
+
+
+
+
+
+	</script>
+</body>
+</html>

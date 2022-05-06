@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root .con {
+  width: 30vw;
+  height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root .con > p {
+  width: 20vw;
+  height: 40vh;
+  font-size: 0.3rem;
+  text-align: justify;
+}
+
+.popup {
+  width: 30vw;
+  height: 70vh;
+  border-radius: 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid dimgray;
+  position: absolute;
+  top: 15vh;
+  right: 45vw;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 2;
+}
+
+.popup > div {
+  width: 25vw;
+  height: 60vh;
+}
+
+.popup > div > div:nth-child(1) {
+  width: 24vw;
+  text-align: end;
+}
+
+.popup > div > div:nth-child(2) {
+  width: 24vw;
+  text-align: start;
+  font-size: 3rem;
+  margin-bottom: 3vh;
+}
+
+.popup > div > div:nth-child(3) {
+  width: 25vw;
+  font-size: 0.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: justify;
+}
+
+.popup > div > div:nth-child(4) {
+  width: 25vw;
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.popup > div > div:nth-child(4) > button {
+  width: 7vw;
+  height: 4vh;
+  border: 0;
+  border-radius: 0.5vw;
+  background-color: lightgray;
+  color: dimgray;
+}
+
+.shadow {
+  width: 30vw;
+  height: 70vh;
+  border-radius: 3vw;
+  position: absolute;
+  top: 19vh;
+  right: 40vw;
+  background-color: gray;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  opacity: 0.5;
+  z-index: 1;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="root"></div>
+	<button id="click-button">click</button>
+	<!-- <button id="c">Click Me</button> -->
+
+
+	<script>
+		const root = document.getElementById('root');
+		root.style.width="100px";
+		root.style.height="100px";
+		root.style.backgroundColor="#333";
+		const clickBtn= document.getElementById('click-button');
+		// const c =document.getElementById('c');
+
+		let isStatus=true;
+		let opacityValue=0;
+		root.style.opacity = opacityValue;
+
+		clickBtn.addEventListener('click',function(){
+			// console.log("hi");
+
+			if(isStatus === true) {
+
+				console.log(isStatus);
+				let timer = setInterval(function() {
+				opacityValue=opacityValue+0.1;
+
+					root.style.opacity=opacityValue;
+				}, 100);
+
+				if(opacityValue>=1)
+				clearInterval(timer);
+				isStatus = false;
+
+
+
+			} else {
+				let timer2 = setInterval(function(){
+				opacityValue=opacityValue-0.2;
+				},100);
+				if(opacityValue<=0){
+				// console.log(isStatus);
+				}
+				
+
+			}
+		
+
+
+
+			});
+
+		// c.addEventListener('click',function(){
+		// 	let fade2 = setInterval(function(){
+				
+		// 		opacityValue=opacityValue-0.1;
+		// 		root.style.opacity=opacityValue;
+		// 		console.log(opacityValue);
+		// 		},500)
+		// })
+		// 다른 버튼으로 제어할수는 있긴함
+
+
+
+
+
+
+	</script>
+</body>
+</html>

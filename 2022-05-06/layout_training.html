@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div id="root">
+		<div class="con">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aut porro excepturi nobis minima et eaque esse hic aperiam blanditiis, ducimus illo. Voluptatum excepturi placeat eligendi, animi repellat distinctio quae blanditiis omnis minus mollitia tempora incidunt ipsam itaque doloribus amet molestias dolorem nulla repudiandae obcaecati optio. Officia ipsum nemo velit fuga architecto, modi rem, facere porro numquam natus ab nulla facilis cum eum debitis, itaque labore temporibus totam praesentium! Corporis minima culpa reiciendis delectus fugiat fuga veritatis quidem doloremque, reprehenderit quibusdam commodi magni non eum. Velit nemo dolores architecto explicabo asperiores, expedita molestias tempora illo, ratione error voluptatibus minus a.</p>
+		</div>
+		<div class="popup">
+			<div>
+				<div><p>X</p></div>
+				<div><p>LOREM<br>IPSUM</p></div>
+				<div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, quo quos? Dolorum veritatis eos quos qui corporis, maxime molestias nam unde, distinctio obcaecati quo recusandae nulla ab optio cupiditate non laborum debitis eligendi illum nobis voluptatem. Odit praesentium, eligendi dicta tempore quia numquam ut ipsum atque nesciunt fuga quisquam sapiente.</p></div>
+				<div><button>close</button></div>
+			</div>
+		</div>
+		<div class="shadow"></div>
+	</div>
+
+	<script>
+		const button = document.querySelector(".popup>div>div:nth-child(4)>button");
+		console.log(button);
+		const target = document.querySelector(".popup")
+		const x =document.querySelector(".popup>div>div:nth-child(1)>p")
+		const s =document.querySelector(".shadow")
+
+		button.addEventListener('click',function(){
+			console.log("버튼을 클릭하면 해당 창이 종료됩니다.");
+			target.style.display="none";
+			s.style.display="none";
+
+		})
+		x.addEventListener('click',function(){
+			// console.log(x);
+			console.log("x를 클릭하면 해당 창이 종료됩니다.");
+			target.style.display="none";
+			s.style.display="none";
+
+		})
+
+	</script>
+</body>
+</html>

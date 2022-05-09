@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+
+		
+
+		li {
+			background-color: brown;
+			color: white;
+		}
+
+		li:hover{
+			background-color: beige;
+			color: blue;
+		}
+
+		.on{
+			font-size: 3rem;
+		}
+		.none{
+			display: none;
+		}
+
+	</style>
+</head>
+<body>
+	<ul id="menu">
+		<li class="items">items-1</li>
+		<li class="items">items-2</li>
+		<li class="items">items-3</li>
+		<li class="items">items-4</li>
+		<li class="items">items-5</li>
+		<li class="items">items-6</li>
+		<li class="items">items-7</li>
+		<li class="items">items-8</li>
+		<li class="items">items-9</li>
+		<li class="items">items-10</li>
+	</ul>
+	<ul id="pop">
+		팝업창을 종료
+	</ul>
+	<script>
+		const ul =document.querySelector('#menu');
+		console.log(ul);
+
+		ul.addEventListener('click',function(event){
+			// alert('hello');
+			// pointer event 가 뜬다.
+			// event 말고 a로 써도 된다.
+			// console.log(event.target);
+			console.dir(event.target);
+			// event.target.style.color="red";
+			// event.target.style.backgroundColor="#ddd";
+			if(event.target.classList.contains('on')){
+				console.log('class에 items 라는 친구가 들어 있습니다.');
+				event.target.classList.remove('on');
+			} else {
+				console.log('그런 클래스는 없습니다.');
+				event.target.classList.add('on');
+			}
+		});
+
+		const pop = document.getElementById('pop');
+		console.log(pop);
+		
+		pop.style.width='10vw';
+		pop.style.height='10vh';
+		pop.style.backgroundColor='beige';
+
+		pop.addEventListener('click',function(event){
+			// alert('hi');
+			if(event.target.classList.contains('none')){
+				console.log('class에 none이라는 친구가 들어있습니다.')
+				event.target.classList.remove('none');
+			}
+			else {
+				console.log('그런 클래스는 없습니다.');
+				event.target.classList.add('none');
+				console.dir(pop);
+			}
+
+		})
+
+
+	</script>
+
+
+</body>
+</html>

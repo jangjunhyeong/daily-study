@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<button id="A">Desktop</button>
+	<button id="B">Tablet</button>
+	<button id="C">Mobile</button>
+	<button id="D">Width Check</button>
+<h1></h1>
+
+
+	<script>
+		console.log(document.body.clientWidth);
+		const h1 = document.querySelector('h1');
+		console.log(h1);
+		const buttonA = document.getElementById('A');
+		const buttonB = document.getElementById('B');
+		const buttonC = document.getElementById('C');
+		const buttonD = document.getElementById('D');
+		// console.log(buttonA);
+		// console.log(buttonB);
+		// console.log(buttonC);
+		let bodyValue = document.body;
+		let bgColorArr = ["black","blue","salmon"];
+		let ColorArr = ["orange","green","yellow"];
+
+		
+		
+		
+		buttonA.addEventListener('click',function(){
+			console.log("Desktop mode");
+			// 버튼에는 문제가 없는데//
+			bodyValue.style.backgroundColor="olive";
+			// 색도 바뀌는데
+			// bodyValue.clientWidth='1000px';
+			document.body.style.width='1000px';
+			// getting만 제어할 수 있고, 읽기전용으로만 사용할 수 있음
+			// 값만 가져올 수 있고, 제어는 불가능함.
+			
+			console.log(bodyValue.clientWidth);
+			console.dir(bodyValue);
+		});
+		
+		
+		buttonD.addEventListener('click',function(){
+			console.log(bodyValue.clientWidth);
+			console.dir(bodyValue);
+		});
+
+
+
+		if(bodyValue.clientWidth > 768){
+			bodyValue.style.backgroundColor = bgColorArr[0];
+			h1.textContent="데스크탑";
+			h1.style.color=ColorArr[2];
+		}
+		else if(bodyValue.clientWidth < 450){
+			bodyValue.style.backgroundColor= bgColorArr[1];
+			h1.textContent="모바일";
+			h1.style.color=ColorArr[0];
+		}
+		else {
+			bodyValue.style.backgroundColor = bgColorArr[2];
+			h1.textContent="태블릿";
+			h1.style.color=ColorArr[1];
+		}
+	</script>
+</body>
+</html>

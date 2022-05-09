@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body{
+			position: relative;
+			/* body 안에서 div이 움직여야 하니까 */
+			width: 100vw;
+			height: 100vh;
+		}
+		#drag_square{
+			position:absolute;
+			width: 250px;
+			height: 250px;
+			background-color: olive;
+			border-radius: 10vw;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-weight: 900;
+		}
+	</style>
+</head>
+<body>
+	<div id="drag_square">Drag</div>
+
+
+
+<!-- 일단 궁금증 가는 곳에 다 적어놓고 MDN 참고해보기로 하자! -->
+
+
+	<script>
+		window.addEventListener('DOMContentLoaded',() => {
+			// window는 뭐지 DOMContentLoaded는 뭐지?
+			// 알아보면서 해보기
+			function dragElement(element){
+				let [positionOne,positionTwo,positionThree,positionFour] = [0,0,0,0];
+				// 아 배열로도 다양하게 변수를 선언할 수 있구나
+				element.addEventListener('mousedown',dragMouseDown);
+				// 마우스를 클릭하고 있는 동안, 마우스를 드래그다운 하는 동안
+				function dragMouseDown(event){
+					event = event || window.event;
+					event.preventDefault();
+					// 기본값을 보호해준다는 뜻일까?
+					positionThree = event.clientX;
+					// offset X값이겠지?
+					positionFour = event.clientY;
+					// offset Y값이겠지?
+
+
+					document.addEventListener('mouseup', closeDragElement);
+					// close는 뭘까?
+					document.addEventListener('mousemove',elementDrag);
+					// 마우스를 움직이나?
+				}
+				function elementDrag(event){
+					event=event || window.event;
+					event.preventDefault();
+					positionOne = positionThree -event.clientX;
+					positionTwo = positionFour -event.clientY; 
+
+					positionThree = event.clientX;
+					positionFour = event. clientY;
+
+					element.style.top =(element.offsetTop - positionTwo) + "px";
+					element.style.left =(element.offsetLeft - positionOne) + "px";
+				}
+
+				function closeDragElement() {
+					document.removeEventListener('mouseup', closeDragElement);
+					// 마우스 클릭을 때면 remove 되는듯하다.
+					document.removeEventListener('mousemove', elementDrag );
+				}
+			}
+			const elementTag = document.querySelector('#drag_square');
+			dragElement(elementTag);
+		});
+	</script>
+</body>
+</html>

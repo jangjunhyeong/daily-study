@@ -19,8 +19,9 @@
 	overflow: hidden;
 
 	& > div {
-		max-width: 20vw;
-		max-height: 20vw;
+		min-width: 20vw;
+		min-height: 20vw;
+		background-color: lightblue;
 		margin: 10px;
 	}
 }

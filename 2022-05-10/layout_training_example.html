@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		#root{
+			width: 100vw;
+			height: 100vh;
+			background-color:olive;
+		}
+
+		#root>div:nth-child(1){
+		background-color: #555;}
+		#root>div:nth-child(2){
+		background-color:#ccc;}
+
+
+	.none{
+		display: none;
+	}
+	</style>
+</head>
+<body>
+	<div id="root">
+		<div id="button">menu-1</div>
+		<div id="menu-items">items-1</div>
+
+
+
+	<script>
+		const btn=document.getElementById('button');
+		const menuItems=document.getElementById('menu-items');
+		console.log(btn);
+		console.log(menuItems);
+
+
+		// Boolean type으로도 할 수 있어야해
+
+		btn.addEventListener('click',function(){
+
+			console.dir(menuItems);
+
+			if(menuItems.classList.contains('none')){
+				menuItems.classList.remove('none');
+			}
+			else{
+				menuItems.classList.add('none');
+			}
+		})
+
+
+	</script>
+
+	</div>
+</body>
+</html>

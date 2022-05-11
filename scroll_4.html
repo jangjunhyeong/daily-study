@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{margin: 0; padding: 0; box-sizing: border-box;}
+
+		#root{
+			width: 100vw;
+			max-width: 100%;
+			height: 500vh;
+			background-color: #ccc;
+		}
+
+		#root>section{
+			width: 5vw;
+			height: 5vh;
+			background-color: slateblue;
+			border: 1px solid black;
+		}
+
+		#root>aside {
+			width: 10vw;
+			height: 10vw;
+			background-color: olive;
+		}
+	</style>
+</head>
+<body>
+	<div id="root">
+	</div>
+
+		<script>
+			const maker = document.getElementById("root");
+			let count = 0;
+			let article = document.createElement('article');
+			maker.appendChild(article);
+			// 이벤트를 건게 아니라 load 이벤트로 그냥 즉시 실행 함수
+			
+			
+			maker.addEventListener('wheel',function(){
+				console.log('wheel 이벤트가 일어나고 있어');
+				// console.log('hello');
+				let section = document.createElement('section');
+				let article = document.createElement('article');
+
+				section.setAttribute('style',`section-${count}`);
+				section.textContent = count;
+				maker.appendChild(section);
+				maker.appendChild(article);
+				count++;
+			})
+
+			maker.addEventListener('click',function(){
+				console.log("지금 클릭 이벤트가 일어나고 있어...");
+				let aside = document.createElement('aside');
+				aside.textContent ="클릭했지롱다리";
+				maker.insertBefore(aside, maker.firstChild);
+			})
+		</script>
+
+</body>
+</html>

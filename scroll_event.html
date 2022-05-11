@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{margin: 0; padding: 0;}
+		#root{
+			width: 100vw;
+			max-width: 100%;
+			height: 500vh;
+			background:linear-gradient(0, rgb(255, 230, 0), rgb(0, 81, 255));
+			/* MDN 확인결과 background-color가 아닌 background를 써야한다. */
+			/* 첫 번째 인자(argument)는 각도,   // 두 세 번째는 색상 */
+		}
+		#root>div{
+			width: 10vw;
+			height: 10vw;
+			border-radius: 30vw;
+			position: sticky;
+			top: 30vh;
+			left: 30vw;
+			background-color: orange;
+		}
+	</style>
+</head>
+<body>
+	
+	<div id="root">
+		<div></div>
+	</div>
+
+	<script>
+		
+		// console.log(window.innerHeight); // 현재 높이 값
+		// console.log(window.outerHeight); // 브라우저 전체 높이 값 ( 툴바 검색창 등 포함)
+		
+		// console.log(body.scrollHeight);
+		// console.log(window.offsetHeight); 왜인지 못찾음
+		
+		
+		console.log(window); //브라우저를 window라고 부른다.
+		const root = document.getElementById('root');
+
+		let docTotalHeightValue = document.body.scrollHeight;
+		
+		window.addEventListener('wheel',(event)=>{
+			// let currentScrollValue = window.scrollY;
+			
+			if(window.scrollY > 0){
+				console.log('당신은 스크롤을 내렸습니다.');
+				console.log(window.scrollY);
+				console.log('전체값' + docTotalHeightValue);
+			}
+
+			if(window.scrollY>=2048) {
+				console.log()
+				console.log('yaho!')
+			}
+			
+			// console.log(event.offsetY);
+			// console.log(window.scrollY);
+			// if(event.offsetY> 700){
+			// 	// alert('스크롤 너무 많이 내렸어');
+			// 	root.style.background="red";
+			// 	root.style.transition="2s"
+			// }
+
+			// if(event.offsetY>1400){
+			// 	root.style.background="blue";
+			// 	root.style.transition="2s"
+
+			
+			// if(event.offsetY>2100){
+			// 	root.style.background="yellow";
+			// 	root.style.transition="2s"
+			// }
+
+			}
+		);
+
+		// 우리가 쓰는 setInterval은 사실 window.setInterval이다.
+
+	</script>
+
+</body>
+</html>

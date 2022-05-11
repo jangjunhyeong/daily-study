@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+:root {
+  --r:red;
+  --g:green;
+  --y:yellow;
+  --b:blue;
+  --p:purple;
+  --o:orange;
+}
+
+.container {
+  width: 50vw;
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  bottom: 3vh;
+}
+
+.container > div:nth-child(1) {
+  width: 25vw;
+  height: 30vh;
+  position: relative;
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+.container > div:nth-child(1) > p {
+  position: absolute;
+  opacity: 0.3;
+  mix-blend-mode: multiply;
+  text-align: right;
+  width: 20vw;
+}
+
+.container > div:nth-child(1) > p:nth-child(1) {
+  color: var(--g);
+}
+
+.container > div:nth-child(1) > p:nth-child(2) {
+  color: var(--o);
+  top: 4vh;
+  left: 1vw;
+}
+
+.container > div:nth-child(1) > p:nth-child(3) {
+  color: var(--y);
+  top: 8vh;
+  left: 1vw;
+}
+
+.container > div:nth-child(1) > p:nth-child(4) {
+  color: var(--r);
+  top: 12vh;
+}
+
+.container > div:nth-child(1) > p:nth-child(5) {
+  color: var(--b);
+  top: 16vh;
+  left: 1vw;
+}
+
+.container > div:nth-child(1) > p:nth-child(6) {
+  color: var(--p);
+  top: 20vh;
+  left: 1vw;
+}
+
+.container > div:nth-child(2) {
+  width: 25vw;
+  height: 30vh;
+  font-size: 0.5rem;
+  color: dimgray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+  right: 3vw;
+}
+/*# sourceMappingURL=style.css.map */

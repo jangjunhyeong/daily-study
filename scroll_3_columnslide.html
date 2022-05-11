@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+			*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		#root{
+			width: 100vw;
+			max-width: 100%;
+		}
+		#root>section{
+			width: inherit; /*100vw*/
+			height: 100vh;
+			border-bottom: 1px solid olive;
+			/* color: white; */
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 5rem;
+		}
+	</style>
+</head>
+<body>
+	<div id="root">
+		<section><h1>1</h1></section>
+		<section><h1>2</h1></section>
+		<section><h1>3</h1></section>
+		<section><h1>4</h1></section>
+		<section><h1>5</h1></section>
+	</div>
+
+	<script>
+		const root = document.getElementById('root');
+		console.log(root);
+		const sections = document.querySelectorAll('#root>section');
+		console.log(sections);
+
+		window.addEventlistener('click',function(){
+			console.log(hi);
+		});
+
+
+	</script>
+</body>
+</html>

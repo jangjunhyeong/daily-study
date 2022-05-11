@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/style2.css">
+</head>
+<body>
+	<div id="root">
+		<div class="container">
+			<div>
+				<p>function</p>
+				<p>variable</p>
+				<p>index</p>
+				<p>constant</p>
+				<p>object</p>
+				<p>array</p>
+			</div>
+			<div>
+				<p>
+				The greatest glory in living lies not in never falling, but in rising every time we fall
+				<p>
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		const target = document.querySelector('.container>div');
+		console.log(target);
+
+		let textValue=5;
+		let isStatus= true;
+		let rotateValue=["-90","-60","-45","-30","-15","0","15","30","45","60","90"]
+		target.addEventListener('click',function(){
+			// console.log("test");
+
+			if(isStatus === true){
+				textValue++;
+				// console.log(textValue);
+				if(textValue>=10){
+					isStatus=false;
+				}
+				target.style.fontSize=`${textValue}rem`;
+
+
+			}else{
+				textValue--;
+				if(textValue<=5){
+					isStatus=true;
+				}
+
+				target.style.fontSize=`${textValue}rem`;
+				// console.log(textValue);
+
+			}
+
+		})
+
+	</script>
+</body>
+</html>

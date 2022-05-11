@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Document</title>
+
+	<style>
+		*{margin: 0; padding: 0; box-sizing: border-box;}
+		#root{
+			width: 100vw;
+			height: 100vh;
+			background-color: #ccc;
+		}
+		#root>section{
+			width: 100vw;
+			height: 10vh;
+			/* background-color: orangered; */
+			/* border-bottom: 1px solid gray; */
+			opacity: 0.7;
+
+		}
+		#A{
+			width: 10vw;
+			position: sticky;
+			top: 1vh;
+			z-index: 2;
+		}
+		#B{
+			width: 10vw;
+			position: sticky;
+			top: 1vh;
+			z-index: 2;
+		}
+		#C{
+			width: 10vw;
+			position: sticky;
+			top: 1vh;
+			z-index: 2;
+		}
+	</style>
+</head>
+<body>
+	<div id="root">
+		<button id="A">A button</button>
+		<button id="B">B button</button>
+		<button id="C">colorArrayReset</button></button>
+	</div>
+
+
+	<!-- A버튼을 눌렀을 때 팝업이 나타난다(none-block이 아니다.) → 만들어진다.(createElement 이후 appendChild 하여 호출하는 방식) -->
+	<!-- createElement() → 지역에서 사용하는 편이다. -->
+
+	<script>
+		const root = document.getElementById("root")
+		console.log(root);
+		const btnA = document.getElementById("A");
+		console.log(btnA);
+		// const section = document.querySelectorAll("#root>section");
+		const btnB =document.getElementById("B");
+		const btnC =document.getElementById("C");
+		
+		const colorArr = ["red","orangered","orange","green","blue"];
+		let colorValue = 0;
+		btnA.addEventListener('click',function(){
+			// console.log("test");
+			if(colorValue>=0){
+				let section = document.createElement('section');
+				root.appendChild(section);
+				section.style.backgroundColor = colorArr[colorValue];
+				colorValue++;
+				console.log(colorValue);
+				if(colorValue>=5){
+					colorValue=0;
+				}
+			}
+		});
+
+		btnB.addEventListener('click',function(){
+			let section =document.querySelector('#root>section');
+			root.removeChild(section);
+		});
+		// 지워지긴하는데 먼저 만들어진게 먼저 지워진다.
+		// 마지막에 만들어진 것 부터 지우게 하려면 어떻게 해야할까?
+		// lastChild 안먹힘 lastElmentChild 안먹힘
+		// first / firstElment 안먹힘
+
+		btnC.addEventListener('click',()=>{
+			colorValue=0;
+	});
+	// C누르면 color 배열 순서가 다시 빨강부터로 시작하게 만든다.
+	</script>
+	
+</body>
+</html>

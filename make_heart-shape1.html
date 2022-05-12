@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		#root{
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		#root>div{
+			position: relative;
+			transform: rotate(225deg);
+		}
+		#root>div>div:nth-child(1){
+			position: absolute;
+			min-width:10vw;
+			max-width: 10vw;
+			height: 10vw;
+			background-color: salmon;
+		}
+		#root>div>div:nth-child(2){
+			position: absolute;
+			width: 10vw;
+			height: 10vw;
+			background-color: salmon;
+			border-radius: 10vw;
+			top: 10vh;
+		}
+		#root>div>div:nth-child(3){
+			position:absolute;
+			width: 10vw;
+			height: 10vw;
+			background-color: salmon;
+			border-radius: 10vw;
+			left: 5vw;
+
+		}
+	</style>
+</head>
+<body>
+	<div id="root">
+		<div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+
+	</div>
+</body>
+</html>

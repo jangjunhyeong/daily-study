@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#root > div {
+  width: 35vw;
+  height: 50vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#root > div > div:nth-child(1) {
+  width: 15vw;
+  height: 40vh;
+  position: absolute;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  -webkit-box-shadow: 5px 5px 10px skyblue;
+          box-shadow: 5px 5px 10px skyblue;
+}
+
+#root > div > div:nth-child(1) > div:nth-child(1) {
+  width: inherit;
+  height: 20vh;
+  border: 1px solid black;
+  background-color: #c902db;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 700;
+}
+
+#root > div > div:nth-child(1) > div:nth-child(1) > p:nth-child(1) {
+  width: 13vw;
+  border-bottom: 1px solid black;
+}
+
+#root > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) {
+  width: 13vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#root > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > p {
+  width: 8vw;
+  border-bottom: 1px solid black;
+}
+
+#root > div > div:nth-child(1) > div:nth-child(2) {
+  width: inherit;
+  height: 20vh;
+  border: 1px solid red;
+  background-color: #009e7c;
+  color: #00471b;
+  font-style: italic;
+  font-size: 0.5rem;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#root > div > div:nth-child(1) > div:nth-child(2) > p {
+  margin-top: 2vh;
+  width: 13vw;
+}
+
+#root > div > div:nth-child(1) > div:nth-child(3) {
+  position: absolute;
+  top: 18vh;
+  left: 6vw;
+  width: 8vw;
+  height: 3vh;
+  background-color: yellow;
+  border: 2px solid red;
+  border-radius: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-style: italic;
+  font-weight: 700;
+  color: green;
+}
+
+#root > div > div:nth-child(2) {
+  width: 15vw;
+  height: 40vh;
+  position: absolute;
+  left: 18vw;
+  top: 10vh;
+  background-color: lightgray;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  z-index: 1;
+}
+
+#root > div > div:nth-child(2) > div:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 2.5rem;
+  margin: 1vw;
+  top: 1vh;
+  color: dimgray;
+}
+
+#root > div > div:nth-child(2) > div:nth-child(2) {
+  width: 14vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 0.5rem;
+  color: dimgray;
+}
+
+#root > div > div:nth-child(2) > div:nth-child(3) {
+  width: 13vw;
+  text-align: justify;
+  font-size: 0.5rem;
+  margin-left: 1vw;
+  margin-top: 2vh;
+}
+/*# sourceMappingURL=style.css.map */

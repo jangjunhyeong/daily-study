@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div id="root">
+		<div>
+			<div>
+				<div>
+					<p>BORDERLINE</p>
+					<div>
+						<p>DESIGN</p>
+					</div>
+				</div>
+				<div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quae, quo veritatis, quis doloremque iste ipsa alias quasi corporis id tenetur quidem culpa qui ipsum debitis ut a! Fugiat officia perferendis laboriosam hic inventore soluta omnis explicabo, quam veritatis nesciunt quod recusandae modi quos minus natus praesentium rem
+				</p></div>
+				<div><p>gooood?</p></div>
+			</div>
+			<div>
+				<div>
+					<p>MODERN</p>
+					<p>DESIGN</p>
+				</div>
+				<div>
+					<p>lorem ipsum</p>
+				</div>
+				<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio maxime repellat id qui, obcaecati molestias. Molestiae qui dolores alias, id nemo numquam ducimus debitis, possimus rem quos laudantium commodi. Tenetur nesciunt iusto voluptatum nulla, aliquid perferendis quas accusantium minima dolores accusamus tempore officiis est, </div>
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		const root = document.getElementById('root');
+		console.log(root); // 정상
+		const colorArr =["darkblue","blue","darkgreen","green","orangered","orange"]
+		const target1 = document.querySelector("#root>div>div:nth-child(1)");
+		console.log(target1); // 정상
+
+		let colorValue = 0;
+		root.addEventListener("click",function(){
+			root.style.backgroundColor=colorArr[colorValue];
+			colorValue++;
+			console.log(colorValue);
+			
+			if(colorValue>=6){
+				colorValue=0;
+			}
+		})
+
+		let marginRightValue = 0;
+		let isStatue = true;
+		target1.addEventListener("wheel",function(event){
+			console.log(event.deltaY);
+
+
+
+				// Q&A : 올라가는 상태와 내려가는 상태를 어떻게 구분해서 제어하나요?
+				// if(deltaY>100)
+				// if(deltaY<100)
+
+			// event deltaY 
+			// 올라가는 상태 -100 
+			// 내려가는 상태 100
+			
+			
+			
+			
+			// console.log("휠 이벤트 발생");
+			// marginRightValue++;
+			// target1.style.marginRight=marginRightValue+'vw';
+			// let h =document.createElement("h6");
+			// h.textContent="영차"
+			// root.appendChild(h);
+			// console.log(h);
+	
+
+
+		})
+	</script>
+</body>
+</html>

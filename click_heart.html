@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="heart"></div>
+
+
+	<script>
+		document.body.style.display='flex';
+		document.body.style.justifyContent='center';
+		const heart= document.getElementById("heart")
+		console.log(heart);
+
+		heart.style.width='10vw';
+		heart.style.height='10vw';
+		// heart.style.backgroundColor='red';
+		heart.style.borderRadius='10vw';
+		heart.style.border='1px solid salmon';
+
+		// heart.addEventListener("click",function(){
+		// 	heart.style.backgroundColor='salmon';
+		// 	console.log(heart.style);
+		// })
+		
+		let indexValue=0;
+		let isStatus = true;
+		
+		heart.addEventListener("click",function(){
+			// console.log('test');
+
+			if(isStatus===true)
+			{heart.style.backgroundColor='salmon';
+				isStatus=false;
+				}else{
+					heart.style.backgroundColor='transparent';
+					isStatus=true;
+				}
+		})
+
+		// heart-shape만 가져오면 바로 제어가 가능하다.
+		// 네모 하나에 원 2개만 가져오면 될듯
+		// svg로 해결하는 게 좋을듯하다.
+
+	</script>
+</body>
+</html>

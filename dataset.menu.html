@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		ul{
+			display: flex;
+			list-style: none;
+			width: 50vw;
+			height: 10vh;
+			justify-content: space-around;
+			align-items: center;
+			background-color: lightgray;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li class="a" data-b="1">menu-1</li>
+		<li class="a" data-b="2">menu-2</li>
+		<li class="a" data-b="3">menu-3</li>
+		<li class="a" data-b="4">menu-4</li>
+	</ul>
+
+	<script>
+		const a = document.getElementsByClassName("a");
+		// console.log(a);
+		console.dir(a);
+		console.log(a[0]);
+
+
+		// 1번 - 얄미운 방법 그냥 i를 1로 만들어서 for문을 배열순서 1부터 돌리게 했다. ^^;
+		// a[0].addEventListener("click",()=>{
+		// 	// console.log("test");  
+		// 	// test OK!
+		// 	for(let i=1; i<a.length; i++) {
+		// 		a[i].style.visibility="hidden";
+		// 	}
+		// })
+
+		// 2번 - 다른 방법 : 불일치 연산자를 사용해서 해결
+		a[0].addEventListener("click",()=>{
+			// console.log("test"); // test OK!
+			for (let i=0; i<a.length; i++){
+
+				if(a[i].dataset.b!=="1"){
+					a[i].style.visibility="hidden";
+				}
+			}
+		})
+
+	</script>
+</body>
+</html>

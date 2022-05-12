@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div class="b" data-yaho="1">1</div>
+	<div class="b" data-yaho="2">2</div>
+	<div class="b" data-yaho="3">3</div>
+	<div class="b" data-yaho="4">4</div>
+	<button id="click">click</button>
+
+	<script>
+		const b = document.getElementsByClassName('b');
+		const click = document.getElementById('click');
+		console.dir(b);
+
+		click.addEventListener("click", () => {
+
+			for(let index=0; index < b.length; index++){
+				b[index].style.color='red';
+				// 여기까진 OK
+				
+				if(b[index].dataset.yaho === "2"){
+					b[index].style.color ='blue';
+					
+				} else {
+					b[index].style.opacity = '0.5';
+				}
+			}
+		})
+
+	</script>
+</body>
+</html>

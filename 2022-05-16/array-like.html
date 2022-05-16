@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="one"></div>
+	<div id="two">
+		<section></section>
+		<section></section>
+		<section></section>
+		<section></section>
+		<section></section>
+		<section></section>
+		<section></section>
+		<section></section>
+		<section></section>
+		<section></section>
+	</div>
+
+	<script>
+		const one = document.querySelector("#one");
+		const twos = document.getElementById("two").children;
+		const three = document.querySelectorAll("#two>section");
+
+		console.log(one);
+
+		// HTMLCollection(10)과 NodeList(10)은 사실 배열이 아니다. 배열처럼 생겼을 뿐
+		console.log(twos);
+		console.log(three);
+
+		const four = Array.from(three);
+		// 배열처럼 보이는 데이터를 → 배열처럼 쓰겠다. (취급)
+		// .slice.call() → "값들의 모음을 다 잘라서 → 배열 자리에 넣어줘" = Array.from과 같다.
+		// 
+		console.log(Array.isArray(four));
+
+	</script>
+</body>
+</html>

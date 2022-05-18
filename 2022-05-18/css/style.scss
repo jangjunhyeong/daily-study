@@ -1,0 +1,35 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+#root{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&>div{
+		width: 80vw;
+		height: 50vh;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		&>div{
+			width: 5vw;
+			height: 5vw;
+			border-radius: 5vw;
+			background-color: lightgray;
+			color: dimgray;
+			text-align: center;
+			line-height: 5vw;
+			font-size: 2rem;
+			// text가 1줄일 때는 line-height를 높이와 같이 줘서 맞추자
+			// 평소에는 div안에 p tag넣고 flex 쓰더라도... 간단한 프로토타입은 이렇게
+		}
+	}
+	&>button{
+		width: 10vw;
+		height: 5vh;
+		position: absolute;
+		top: 80vh;
+	}
+}

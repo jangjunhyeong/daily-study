@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div id="root">
+		<div id="target">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+		</div>
+		<button>Click</button>
+	</div>
+
+
+	<script>
+		const Btn = document.querySelector("#root>button");
+		// console.log(Btn);
+		const target=document.getElementById('target');
+		// console.log(target);
+		// Array.from(target);
+		
+
+		// 이러면 일괄 제어가 된다.		
+		// Btn.addEventListener('click',()=>{
+		// 	console.log("test");
+
+		// 	for(let i=0; i<target.children.length; i++){
+		// 		if([i]%2!==0){
+		// 			console.log("hi")
+		// 			target.children[i].style.marginTop="20vh"
+		// 		} else {
+		// 			console.log("bye")
+		// 			target.children[i].style.marginBottom='20vh';
+
+		// 		}
+		// 	}
+		// })
+
+
+			let i = 0;
+		Btn.addEventListener('click',()=>{
+			// console.log("test");
+				if(i%2===0){
+					target.children[i].style.marginBottom="30vh"
+					target.children[i].style.transition='1s'
+					target.animate(rotate90,timing);
+					console.log(i);
+					i++;
+				} else{
+					target.children[i].style.marginTop='40vh';
+					target.children[i].style.transition='1s';
+					target.animate(rotate90,timing);
+					console.log(i);
+					i++;
+				}
+		})
+
+		// ★ 다른 방법도 고안해보기 ★
+		// forEach() , filter(), for()
+	</script>
+</body>
+</html>

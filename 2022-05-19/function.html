@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<script>
+
+		// Todo : 배열 생성기
+
+		//Array form을 함수로 만들어보기
+		function arrMaker(element){
+			let arr = [];
+			arr.push(element);
+			return arr;
+		};
+		
+		function add(a,b){
+			return a+b;
+		}
+		// 다른 방법으로 만들기
+		function arrMaker(element){
+			let arr = [];
+			arr[0]=element;
+			arr[1]=add(1,2);
+			if(typeof element === "string"){
+			arr[2] = element.length;
+		}
+		return arr;
+	};
+
+		console.log(arrMaker('감자탕'));
+		console.log(Array.isArray(arrMaker('감자탕')));
+
+
+	</script>
+</body>
+</html>

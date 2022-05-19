@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<span id="test">this is span</span>
+
+	<script>
+		const test = document.getElementById('test');
+		console.dir(test);
+
+		function tagNameChecker(element){
+			if(element.tagName.length!==0){
+				return element.tagName.length;
+			}
+		};
+
+		
+		function tagNameChecker2(element){
+			if(element.tagName.length!==0){
+				return element.tagName.toLowerCase();
+			}
+		};
+	
+		function tagNameChecker3(element){
+			if(element.tagName.length!==0){
+				return console.log("hi");
+			}
+		};
+
+		console.log(tagNameChecker(test));
+		console.log(tagNameChecker2(test));
+		
+
+		
+		const makeSpan = document.createElement(tagNameChecker(test));
+		const makeSpan2 = document.createElement(tagNameChecker("span"));
+		// makeSpan2 는 리터럴
+
+
+	</script>
+</body>
+</html>

@@ -13,12 +13,16 @@ console.log(btnB);
 const text =document.getElementById("text");
 console.dir(text);
 console.log(text.children);
-const textArray = [1,2,3,4,5];
+const textArray = ['1','2','3','4','5'];
 console.log(textArray);
 
 const con = document.getElementById("con");
 console.log(con);
+con.style.width='100vw';
+con.style.height='100vh';
 con.style.display='flex';
+con.style.justifyContent='center';
+con.style.alignItems='center';
 text.style.display='flex';
 
 for(let i=0; i<textArray.length; i++){
@@ -43,13 +47,23 @@ for(let i=0; i<textArray.length; i++){
 // })
 
 btnA.addEventListener("click",function(){
-	// console.log("test왼")
-	let index=0;
-	textArray.shift();
-	textArray.push(textArray.shift());
-	
+	console.log("test왼");
+	let left = textArray.shift();
+	console.log(left);
+	let leftpush = textArray.push(left);
+	console.log(textArray);
+	for(let i=0; i<textArray.length; i++){
+		text.children[i].textContent=textArray[i];
+	}
 })
-
+btnB.addEventListener("click",function(){
+	console.log("test오");
+	let right = textArray.pop();
+	let rightunshift = textArray.unshift(right);
+	for (let i=0; i<textArray.length; i++){
+		text.children[i].textContent=textArray[i];
+	}
+})
 	// 앞 배열 요소가 삭제되고, 뒤로 붙긴 하는데 i가 증가하니까
 	// 함수값 위치만 바꿔주면 될 듯 하다.
 	// 일단 킾
@@ -109,9 +123,7 @@ btnA.addEventListener("click",function(){
 // })
 // text.children[0~4].textContent는 고정으로 넣고 Array[index]에서 index값만 조정해주면 될 것 같다.
 
-btnB.addEventListener("click",function(){
-	console.log("testRight")
-})
+
 
 
 

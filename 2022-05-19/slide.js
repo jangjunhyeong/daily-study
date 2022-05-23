@@ -32,25 +32,40 @@ for(let i=0; i<textArray.length; i++){
 // const text =Document.getElementById("text"); 
 // Document와 document의 차이는 뭘까.
 
-
+// 얘는 왜 안될까? 변수를 안쓴거 말고는 다른게 없는데?
 // btnA.addEventListener("click",function(){
 // 	// console.log("test왼")
 // 	textArray.shift();
+// 	console.log(textArray.shift());
+// 	textArray.push(textArray.shift());
 // 	for(let index=0; index<textArray.length; index++){
-// 		textArray.push(textArray.shift());
 // 		text.children[index].textContent=textArray[index];
 // 		console.log(textArray);
-// 		if(index>=4){
-// 			index=0;
-// 		}
 // 	}
 // })
 
+// array[0] (배열의 0번째는 temp라는 변수로 선언했던 방식을 토대로)
+// 삭제했던 배열의 N번째 (첫번째 또는 마지막 번째)를 변수로 선언해서
+// 불러오는 방식을 시도해보았다.
+
+
+// 해볼만한 것 위에는 안되고 왜 아래는 되는지? 위아래 addEventListener가 어떻게 다른지
+// 연구해보기 - 사실 변수를 썼냐 안썼냐의 차이인데 왜 결과물이 다른지를 생각해보아야 했다.
+
+// 얘는 왜 잘 될까? 변수를 쓴 것 뿐인데?
 btnA.addEventListener("click",function(){
 	console.log("test왼");
 	let left = textArray.shift();
 	console.log(left);
 	let leftpush = textArray.push(left);
+	// 가비지 콜렉션(GC);
+	// 아깐 떴는데 지금은 또 안뜬다. 회색으로 되었던 GC
+	console.log(leftpush);
+	// 출력값  5
+	console.dir(leftpush);
+	// 출력값  5
+	console.log(leftpush.length);
+	// undefined 출력 
 	console.log(textArray);
 	for(let i=0; i<textArray.length; i++){
 		text.children[i].textContent=textArray[i];
@@ -59,7 +74,10 @@ btnA.addEventListener("click",function(){
 btnB.addEventListener("click",function(){
 	console.log("test오");
 	let right = textArray.pop();
+	console.log(right);
 	let rightunshift = textArray.unshift(right);
+	// GC 발생
+	console.log(textArray);
 	for (let i=0; i<textArray.length; i++){
 		text.children[i].textContent=textArray[i];
 	}

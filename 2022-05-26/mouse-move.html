@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- css에서 hover나 out는 있지만 move감지는 지원을 하지 않는다. -->
+	<title>Document</title>
+	<style>
+		*{margin: 0; padding: 0; box-sizing: border-box;}
+		#root{
+			width: 100vw;
+			height: 100vh;
+			background-color: #ccc;
+			color: #333;
+		}
+	</style>
+</head>
+<body>
+	<div id="root">
+		<h1>111</h1>
+		<h1>222</h1>
+	</div>
+
+	<script>
+		const root = document.getElementById('root');
+		console.dir(root);
+
+		let totalHeight = root.offsetHeight;
+		let halfHeight = root.offsetHeight*0.5;
+
+		console.log(Math.round(255*0.56));
+
+		let bgColorValue=0;
+		let bgColor =`rgb(${bgColorValue},${bgColorValue},${bgColorValue})`;
+		// console.log(root);
+
+		// let setResult =(255*35)/100;
+		// console.log(Math.round(setResult)); 
+		//  89.25 -> 89	
+
+		root.addEventListener('mousemove',(event)=>{
+			root.style.backgroundColor=bgColor;
+			// console.log(event.offsetX);
+			console.log(event.offsetY);
+			root.children[0].textContent= event.offsetX;
+			root.children[1].textContent= event.offsetY;
+
+			if(event.offsetX>500&&offsetY>500){
+				root.style.backgroundColor='blue';
+			}else{
+				root.style.backgroundColor='red';
+			}
+			if(event.offsetY>500&&offsetX>500){
+				root.style.backgroundColor='olive';
+			}else{
+				root.style.backgroundColor='orangered';
+			}
+		});
+	</script>
+</body>
+</html>

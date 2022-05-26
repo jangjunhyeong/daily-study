@@ -1,0 +1,41 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	max-width: 100%;
+
+}
+#root{
+	width: 100vw;
+	overflow-x:hidden;
+	height: 200vh;
+	background-color: #ccc;
+}
+// header 크기는 가능한 고정해보기
+header{
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 15vh;
+	background-color: #bbb;
+	position: sticky;
+	top: 0;
+}
+main{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #ddd;
+
+
+}
+footer{
+	width: 100vw;
+	height: 10vh;
+	background-color:rgb(51, 51, 51);
+	position: fixed;
+	bottom: 0;
+}

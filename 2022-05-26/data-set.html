@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="root" data-index="1">
+		<section class="test"></section>
+		<section class="test"></section>
+		<section class="test"></section>
+		<section class="test" data-index="1"></section>
+		<section class="test"></section>
+
+		<article class="test"></article>
+		<article class="test"></article>
+		<article class="test" data-index="1"></article>
+		<article class="test"></article>
+		<article class="test"></article>
+
+		<nav class="test"></nav>
+		<nav class="test"></nav>
+		<nav class="test"></nav>
+		<nav class="test" data-index="1"></nav>
+		<nav class="test"></nav>
+	</div>
+
+
+
+
+
+	<script>
+		const root = document.getElementById('root');
+
+		const testOne = document.querySelectorAll('.test');
+		const testTwo = document.getElementsByClassName('test');
+		// const testThree = document.getElementsByTagName
+		// 얘는 못쓴다 Tag가 다르니깐.
+
+		console.log(testOne);
+
+
+		for(let i=0; i<testOne.length; i++){
+			if(testOne[i].dataset.index === "1") {
+				console.log(i);
+				if(testOne[i].classList.contains('test')){
+					testOne[i].style.backgroundColor='olive';
+					testOne[i].style.width="100px";
+					testOne[i].style.height="100px";
+					testOne[i].textContent="저에겐 test라는 class가 있습니다.";
+				}
+			}
+		}
+
+
+		// console.log(testTwo);
+
+		// console.dir(root);
+		// console.log(root.dataset);
+		// 객체
+
+		// console.log(typeof root.dataset.index);
+
+		// console.log(root.classList);
+		// 배열
+
+		// console.log(root.dataset.hi);
+		// console.log(root.dataset["hi"]);
+		// 두 가지는 같다.
+
+	</script>
+</body>
+</html>

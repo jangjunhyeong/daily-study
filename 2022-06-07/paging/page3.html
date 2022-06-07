@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{margin: 0; padding: 0; box-sizing: border-box; max-width: 100%;}
+		section{
+			width: 100vw;
+			height: 100vh;
+			border-bottom: 1px solid salmon;
+		}
+		#menu{
+			position: fixed;
+			top:0;
+			right: 0;
+		}
+		html {
+			scroll-behavior: smooth;
+		}
+	</style>
+</head>
+<body>
+	<ul id="menu">
+		<li><a href="#num-1">num-1</a></li>
+		<li><a href="#num-2">num-2</a></li>
+		<li><a href="#num-3">num-3</a></li>
+		<li><a href="#num-4">num-4</a></li>
+		<li><a href="#num-5">num-5</a></li>
+		<li><a href="#num-6">num-6</a></li>
+		<li><a href="#num-7">num-7</a></li>
+		<li><a href="#num-8">num-8</a></li>
+		<li><a href="#num-9">num-9</a></li>
+		<li><a href="#num-10">num-10</a></li>
+	</ul>
+	<section id="num-1"></section>
+	<section id="num-2"></section>
+	<section id="num-3"></section>
+	<section id="num-4"></section>
+	<section id="num-5"></section>
+	<section id="num-6"></section>
+	<section id="num-7"></section>
+	<section id="num-8"></section>
+	<section id="num-9"></section>
+	<section id="num-10"></section>
+
+
+	<script>
+		window.addEventListener('hashchange',function(){
+			const urlTest =location.href;
+			const hashTest = location.hash;
+			console.log("href :" + urlTest);
+			console.log("hash :" + hashTest);
+			console.log("hash :" + hashTest.substring(1));
+			console.dir(window.location);
+
+		})
+
+
+		// id가 바뀌었을때도 제어가 가능하다.
+		// 해당 id가 아닌 다른 상태라면 지워줘
+		// 선택한 친구 제외하고 display:none 해줘
+
+		// 다수의 html 파일이 유기적 '이동'(다시 로딩) → 안정적인 방법
+		// 1. 백엔드가 붙어야 함
+		// -------
+		// 모든 문서를 자바스크립트가 '제작' 하는 방식을 취하면
+		// 선택한 놈 말고는 빼면 됨
+		// single page인데 → 필요한 만큼 전환이 가능해진다.
+		// 1. 마크업 → 프로그래밍
+
+		// module이 빛을 발휘한다.
+		// 페이지네이션 = route / routing
+		// 1. window → dom , bom → location(통신) : 구별용으로 쓰기
+		
+	</script>
+</body>
+</html>
